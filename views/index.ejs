@@ -94,7 +94,7 @@
     
                         <div class="notes_main">
                             <div class="notes_header">
-                                <p>Todo List</p>
+                                <p>To-do List</p>
                                 <button data-modal="modal_1" class="notes_btn modal_btn"><i class="fas fa-plus"></i> Add task</button>
                             </div>
                             <div class="notes_content">
@@ -188,7 +188,10 @@
                                                         <td><i class="far fa-square box_unchecked"></i></td>
                                                     <% } %>
                                                     <td><%= merchants[n].update %></td>
-                                                    <td class="modal_btn edit_merchant" data-modal="modal_10" data-id="<%= merchants[n].id %>"><i class="fas fa-edit"></i></td>
+                                                    <td style="vertical-align: middle; text-align: center;">
+                                                        <i class="fas fa-edit edit_merchant modal_btn" data-modal="modal_10" data-id="<%= merchants[n].id %>"></i>
+                                                        <i class="fas fa-trash-alt delete_merchant" data-id="<%= merchants[n].id %>"></i>
+                                                    </td>
                                                 </tr>
                                             <% } %>
                                         <% } %>

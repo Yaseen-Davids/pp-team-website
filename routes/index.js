@@ -494,6 +494,27 @@ router.get("/get_merchant/:id", ensureAuthenticated, function(req, res, next){
 
 })
 
+// ************** DELETE NOTE **************
+router.delete('/delete-merchant/:id', ensureAuthenticated, function(req, res, next){
+
+  let query = {_id:req.params.id};
+
+  Merchant.findById(req.params.id, function(err, note){
+    if (err) {
+      console.log(err);
+      return;
+    }
+    else{
+      Merchant.remove(query, function(err){
+        if (err){
+          console.log(err);
+          return;
+        }
+      })
+    }
+  });
+})
+
 
 // ************** Access control **************
 function ensureAuthenticated(req, res, next){

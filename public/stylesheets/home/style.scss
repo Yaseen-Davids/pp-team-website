@@ -348,13 +348,18 @@
                             padding: 10px;
                         }
                     }
+                    .delete_merchant{
+                        cursor: pointer;
+                        margin-left: 10px;
+                        color: $deleteRed;
+                    }
                     .edit_merchant{
                         cursor: pointer;
                         color: #35A7FF;
                         transition: all 0.2s;
-                        i{
-                            margin-left:20px;
-                        }
+                        // i{
+                        //     margin-left:20px;
+                        // }
                         &:hover{
                             color: rgb(3, 129, 224);
                         }

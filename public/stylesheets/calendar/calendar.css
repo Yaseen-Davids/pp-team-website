@@ -256,19 +256,19 @@
   }
 }
 
-.modal_3 .modal_main, .modal_6 .modal_main, .modal_7 .modal_main, .modal_8 .modal_main {
+.modal_3 .modal_main, .modal_6 .modal_main, .modal_7 .modal_main, .modal_8 .modal_main, .modal_11 .modal_main {
   height: 180px;
 }
 
-.modal_3 .modal_main .modal_options, .modal_6 .modal_main .modal_options, .modal_7 .modal_main .modal_options, .modal_8 .modal_main .modal_options {
+.modal_3 .modal_main .modal_options, .modal_6 .modal_main .modal_options, .modal_7 .modal_main .modal_options, .modal_8 .modal_main .modal_options, .modal_11 .modal_main .modal_options {
   text-align: center;
 }
 
-.modal_3 .modal_main .modal_options button, .modal_6 .modal_main .modal_options button, .modal_7 .modal_main .modal_options button, .modal_8 .modal_main .modal_options button {
+.modal_3 .modal_main .modal_options button, .modal_6 .modal_main .modal_options button, .modal_7 .modal_main .modal_options button, .modal_8 .modal_main .modal_options button, .modal_11 .modal_main .modal_options button {
   margin-top: 30px;
 }
 
-.modal_3 .modal_main .modal_options .modal_edit_btn, .modal_6 .modal_main .modal_options .modal_edit_btn, .modal_7 .modal_main .modal_options .modal_edit_btn, .modal_8 .modal_main .modal_options .modal_edit_btn {
+.modal_3 .modal_main .modal_options .modal_edit_btn, .modal_6 .modal_main .modal_options .modal_edit_btn, .modal_7 .modal_main .modal_options .modal_edit_btn, .modal_8 .modal_main .modal_options .modal_edit_btn, .modal_11 .modal_main .modal_options .modal_edit_btn {
   margin-right: 20px;
   border: none;
   outline: none;
@@ -284,12 +284,12 @@
   background: #2469ff;
 }
 
-.modal_3 .modal_main .modal_options .modal_edit_btn:hover, .modal_6 .modal_main .modal_options .modal_edit_btn:hover, .modal_7 .modal_main .modal_options .modal_edit_btn:hover, .modal_8 .modal_main .modal_options .modal_edit_btn:hover {
+.modal_3 .modal_main .modal_options .modal_edit_btn:hover, .modal_6 .modal_main .modal_options .modal_edit_btn:hover, .modal_7 .modal_main .modal_options .modal_edit_btn:hover, .modal_8 .modal_main .modal_options .modal_edit_btn:hover, .modal_11 .modal_main .modal_options .modal_edit_btn:hover {
   -webkit-box-shadow: 0 0 10px #555;
           box-shadow: 0 0 10px #555;
 }
 
-.modal_3 .modal_main .modal_options .modal_delete_btn, .modal_6 .modal_main .modal_options .modal_delete_btn, .modal_7 .modal_main .modal_options .modal_delete_btn, .modal_8 .modal_main .modal_options .modal_delete_btn {
+.modal_3 .modal_main .modal_options .modal_delete_btn, .modal_6 .modal_main .modal_options .modal_delete_btn, .modal_7 .modal_main .modal_options .modal_delete_btn, .modal_8 .modal_main .modal_options .modal_delete_btn, .modal_11 .modal_main .modal_options .modal_delete_btn {
   border: none;
   outline: none;
   background: transparent;
@@ -304,12 +304,12 @@
   background: #b40000;
 }
 
-.modal_3 .modal_main .modal_options .modal_delete_btn:hover, .modal_6 .modal_main .modal_options .modal_delete_btn:hover, .modal_7 .modal_main .modal_options .modal_delete_btn:hover, .modal_8 .modal_main .modal_options .modal_delete_btn:hover {
+.modal_3 .modal_main .modal_options .modal_delete_btn:hover, .modal_6 .modal_main .modal_options .modal_delete_btn:hover, .modal_7 .modal_main .modal_options .modal_delete_btn:hover, .modal_8 .modal_main .modal_options .modal_delete_btn:hover, .modal_11 .modal_main .modal_options .modal_delete_btn:hover {
   -webkit-box-shadow: 0 0 10px #555;
           box-shadow: 0 0 10px #555;
 }
 
-.modal_3 .modal_main .modal_options .fas, .modal_6 .modal_main .modal_options .fas, .modal_7 .modal_main .modal_options .fas, .modal_8 .modal_main .modal_options .fas {
+.modal_3 .modal_main .modal_options .fas, .modal_6 .modal_main .modal_options .fas, .modal_7 .modal_main .modal_options .fas, .modal_8 .modal_main .modal_options .fas, .modal_11 .modal_main .modal_options .fas {
   margin-left: 5px;
 }
 
