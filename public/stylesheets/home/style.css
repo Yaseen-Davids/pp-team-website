@@ -51,11 +51,11 @@
   cursor: pointer;
 }
 
-.modal_2 .modal_main, .modal_1 .modal_main, .modal_4 .modal_main, .modal_5 .modal_main {
+.modal_2 .modal_main, .modal_1 .modal_main, .modal_4 .modal_main, .modal_5 .modal_main, .modal_9 .modal_main, .modal_10 .modal_main {
   position: relative;
 }
 
-.modal_2 .modal_main .modal_form, .modal_1 .modal_main .modal_form, .modal_4 .modal_main .modal_form, .modal_5 .modal_main .modal_form {
+.modal_2 .modal_main .modal_form, .modal_1 .modal_main .modal_form, .modal_4 .modal_main .modal_form, .modal_5 .modal_main .modal_form, .modal_9 .modal_main .modal_form, .modal_10 .modal_main .modal_form {
   position: absolute;
   left: 50%;
   top: 80px;
@@ -63,19 +63,20 @@
           transform: translate(-50%, 0%);
 }
 
-.modal_2 .modal_main .modal_form .input_box, .modal_1 .modal_main .modal_form .input_box, .modal_4 .modal_main .modal_form .input_box, .modal_5 .modal_main .modal_form .input_box {
+.modal_2 .modal_main .modal_form .input_box, .modal_1 .modal_main .modal_form .input_box, .modal_4 .modal_main .modal_form .input_box, .modal_5 .modal_main .modal_form .input_box, .modal_9 .modal_main .modal_form .input_box, .modal_10 .modal_main .modal_form .input_box {
   margin-top: 10px;
   padding: 15px;
   width: 100%;
 }
 
-.modal_2 .modal_main .modal_form .input_box label, .modal_1 .modal_main .modal_form .input_box label, .modal_4 .modal_main .modal_form .input_box label, .modal_5 .modal_main .modal_form .input_box label {
+.modal_2 .modal_main .modal_form .input_box label, .modal_1 .modal_main .modal_form .input_box label, .modal_4 .modal_main .modal_form .input_box label, .modal_5 .modal_main .modal_form .input_box label, .modal_9 .modal_main .modal_form .input_box label, .modal_10 .modal_main .modal_form .input_box label {
   color: #7C8695;
   margin-left: 5px;
   font-size: 14px;
+  margin-bottom: 5px;
 }
 
-.modal_2 .modal_main .modal_form .input_box select, .modal_1 .modal_main .modal_form .input_box select, .modal_4 .modal_main .modal_form .input_box select, .modal_5 .modal_main .modal_form .input_box select {
+.modal_2 .modal_main .modal_form .input_box select, .modal_1 .modal_main .modal_form .input_box select, .modal_4 .modal_main .modal_form .input_box select, .modal_5 .modal_main .modal_form .input_box select, .modal_9 .modal_main .modal_form .input_box select, .modal_10 .modal_main .modal_form .input_box select {
   border: 1px solid #D9D9D9;
   padding: 10px;
   width: 300px;
@@ -83,7 +84,7 @@
   color: #7C8695;
 }
 
-.modal_2 .modal_main .modal_form .input_box input, .modal_1 .modal_main .modal_form .input_box input, .modal_4 .modal_main .modal_form .input_box input, .modal_5 .modal_main .modal_form .input_box input {
+.modal_2 .modal_main .modal_form .input_box input, .modal_1 .modal_main .modal_form .input_box input, .modal_4 .modal_main .modal_form .input_box input, .modal_5 .modal_main .modal_form .input_box input, .modal_9 .modal_main .modal_form .input_box input, .modal_10 .modal_main .modal_form .input_box input {
   border: none;
   outline: none;
   border-bottom: 1px solid #D9D9D9;
@@ -91,44 +92,43 @@
   height: 40px;
   width: 300px;
   font-size: 16px;
-  font-weight: 600;
   color: #7C8695;
 }
 
-.modal_2 .modal_main .modal_form .input_box input:focus, .modal_1 .modal_main .modal_form .input_box input:focus, .modal_4 .modal_main .modal_form .input_box input:focus, .modal_5 .modal_main .modal_form .input_box input:focus {
+.modal_2 .modal_main .modal_form .input_box input:focus, .modal_1 .modal_main .modal_form .input_box input:focus, .modal_4 .modal_main .modal_form .input_box input:focus, .modal_5 .modal_main .modal_form .input_box input:focus, .modal_9 .modal_main .modal_form .input_box input:focus, .modal_10 .modal_main .modal_form .input_box input:focus {
   border-bottom-color: #333;
 }
 
-.modal_2 .modal_main .modal_form .input_box input::-webkit-input-placeholder, .modal_1 .modal_main .modal_form .input_box input::-webkit-input-placeholder, .modal_4 .modal_main .modal_form .input_box input::-webkit-input-placeholder, .modal_5 .modal_main .modal_form .input_box input::-webkit-input-placeholder {
+.modal_2 .modal_main .modal_form .input_box input::-webkit-input-placeholder, .modal_1 .modal_main .modal_form .input_box input::-webkit-input-placeholder, .modal_4 .modal_main .modal_form .input_box input::-webkit-input-placeholder, .modal_5 .modal_main .modal_form .input_box input::-webkit-input-placeholder, .modal_9 .modal_main .modal_form .input_box input::-webkit-input-placeholder, .modal_10 .modal_main .modal_form .input_box input::-webkit-input-placeholder {
   font-weight: 600;
   color: #7C8695;
 }
 
-.modal_2 .modal_main .modal_form .input_box input:-ms-input-placeholder, .modal_1 .modal_main .modal_form .input_box input:-ms-input-placeholder, .modal_4 .modal_main .modal_form .input_box input:-ms-input-placeholder, .modal_5 .modal_main .modal_form .input_box input:-ms-input-placeholder {
+.modal_2 .modal_main .modal_form .input_box input:-ms-input-placeholder, .modal_1 .modal_main .modal_form .input_box input:-ms-input-placeholder, .modal_4 .modal_main .modal_form .input_box input:-ms-input-placeholder, .modal_5 .modal_main .modal_form .input_box input:-ms-input-placeholder, .modal_9 .modal_main .modal_form .input_box input:-ms-input-placeholder, .modal_10 .modal_main .modal_form .input_box input:-ms-input-placeholder {
   font-weight: 600;
   color: #7C8695;
 }
 
-.modal_2 .modal_main .modal_form .input_box input::-ms-input-placeholder, .modal_1 .modal_main .modal_form .input_box input::-ms-input-placeholder, .modal_4 .modal_main .modal_form .input_box input::-ms-input-placeholder, .modal_5 .modal_main .modal_form .input_box input::-ms-input-placeholder {
+.modal_2 .modal_main .modal_form .input_box input::-ms-input-placeholder, .modal_1 .modal_main .modal_form .input_box input::-ms-input-placeholder, .modal_4 .modal_main .modal_form .input_box input::-ms-input-placeholder, .modal_5 .modal_main .modal_form .input_box input::-ms-input-placeholder, .modal_9 .modal_main .modal_form .input_box input::-ms-input-placeholder, .modal_10 .modal_main .modal_form .input_box input::-ms-input-placeholder {
   font-weight: 600;
   color: #7C8695;
 }
 
-.modal_2 .modal_main .modal_form .input_box input::placeholder, .modal_1 .modal_main .modal_form .input_box input::placeholder, .modal_4 .modal_main .modal_form .input_box input::placeholder, .modal_5 .modal_main .modal_form .input_box input::placeholder {
+.modal_2 .modal_main .modal_form .input_box input::placeholder, .modal_1 .modal_main .modal_form .input_box input::placeholder, .modal_4 .modal_main .modal_form .input_box input::placeholder, .modal_5 .modal_main .modal_form .input_box input::placeholder, .modal_9 .modal_main .modal_form .input_box input::placeholder, .modal_10 .modal_main .modal_form .input_box input::placeholder {
   font-weight: 600;
   color: #7C8695;
 }
 
-.modal_2 .modal_main .modal_form .input_box .calendar_date, .modal_1 .modal_main .modal_form .input_box .calendar_date, .modal_4 .modal_main .modal_form .input_box .calendar_date, .modal_5 .modal_main .modal_form .input_box .calendar_date {
+.modal_2 .modal_main .modal_form .input_box .calendar_date, .modal_1 .modal_main .modal_form .input_box .calendar_date, .modal_4 .modal_main .modal_form .input_box .calendar_date, .modal_5 .modal_main .modal_form .input_box .calendar_date, .modal_9 .modal_main .modal_form .input_box .calendar_date, .modal_10 .modal_main .modal_form .input_box .calendar_date {
   width: 160px;
 }
 
-.modal_2 .modal_main .modal_form .input_box #color_input, .modal_1 .modal_main .modal_form .input_box #color_input, .modal_4 .modal_main .modal_form .input_box #color_input, .modal_5 .modal_main .modal_form .input_box #color_input {
+.modal_2 .modal_main .modal_form .input_box #color_input, .modal_1 .modal_main .modal_form .input_box #color_input, .modal_4 .modal_main .modal_form .input_box #color_input, .modal_5 .modal_main .modal_form .input_box #color_input, .modal_9 .modal_main .modal_form .input_box #color_input, .modal_10 .modal_main .modal_form .input_box #color_input {
   width: 60px;
   border: none;
 }
 
-.modal_2 .modal_main .modal_form .button_calendar, .modal_1 .modal_main .modal_form .button_calendar, .modal_4 .modal_main .modal_form .button_calendar, .modal_5 .modal_main .modal_form .button_calendar {
+.modal_2 .modal_main .modal_form .button_calendar, .modal_1 .modal_main .modal_form .button_calendar, .modal_4 .modal_main .modal_form .button_calendar, .modal_5 .modal_main .modal_form .button_calendar, .modal_9 .modal_main .modal_form .button_calendar, .modal_10 .modal_main .modal_form .button_calendar {
   outline: none;
   width: 300px;
   border: none;
@@ -144,14 +144,14 @@
   margin-top: 25px;
 }
 
-.modal_2 .modal_main .modal_form .button_calendar .submit_arrow, .modal_1 .modal_main .modal_form .button_calendar .submit_arrow, .modal_4 .modal_main .modal_form .button_calendar .submit_arrow, .modal_5 .modal_main .modal_form .button_calendar .submit_arrow {
+.modal_2 .modal_main .modal_form .button_calendar .submit_arrow, .modal_1 .modal_main .modal_form .button_calendar .submit_arrow, .modal_4 .modal_main .modal_form .button_calendar .submit_arrow, .modal_5 .modal_main .modal_form .button_calendar .submit_arrow, .modal_9 .modal_main .modal_form .button_calendar .submit_arrow, .modal_10 .modal_main .modal_form .button_calendar .submit_arrow {
   color: transparent;
   margin-left: 0px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-.modal_2 .modal_main .modal_form .button_calendar:hover .submit_arrow, .modal_1 .modal_main .modal_form .button_calendar:hover .submit_arrow, .modal_4 .modal_main .modal_form .button_calendar:hover .submit_arrow, .modal_5 .modal_main .modal_form .button_calendar:hover .submit_arrow {
+.modal_2 .modal_main .modal_form .button_calendar:hover .submit_arrow, .modal_1 .modal_main .modal_form .button_calendar:hover .submit_arrow, .modal_4 .modal_main .modal_form .button_calendar:hover .submit_arrow, .modal_5 .modal_main .modal_form .button_calendar:hover .submit_arrow, .modal_9 .modal_main .modal_form .button_calendar:hover .submit_arrow, .modal_10 .modal_main .modal_form .button_calendar:hover .submit_arrow {
   color: white;
   margin-left: 10px;
 }
@@ -403,13 +403,13 @@
   grid-area: main_section;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'weather_main notes_main' 'news_main .';
-  -ms-grid-columns: 1fr 60%;
-      grid-template-columns: 1fr 60%;
-  padding: 20px;
-  grid-gap: 10px;
+      grid-template-areas: 'first_section' 'second_section';
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 20px;
   overflow-y: scroll;
   overflow-x: hidden;
+  padding: 10px;
 }
 
 .admin_panel .main_section::-webkit-scrollbar {
@@ -422,6 +422,24 @@
 
 .admin_panel .main_section::-webkit-scrollbar-thumb {
   background: #555;
+}
+
+.admin_panel .main_section .first_section {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'weather_main notes_main';
+  -ms-grid-columns: 1fr 65%;
+      grid-template-columns: 1fr 65%;
+  grid-gap: 20px;
+}
+
+.admin_panel .main_section .second_section {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'news_main merchants_main';
+  -ms-grid-columns: 40% 1fr;
+      grid-template-columns: 40% 1fr;
+  grid-gap: 20px;
 }
 
 .admin_panel .main_section .weather_main {
@@ -438,15 +456,15 @@
 }
 
 .admin_panel .main_section .weather_main .weather_header {
-  padding: 10px;
+  padding: 15px;
   background: #f0f0f0;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
 .admin_panel .main_section .weather_main .weather_header p {
-  font-weight: 600;
-  font-size: 20px;
+  font-family: 'Questrial', sans-serif;
+  font-size: 22px;
   color: #555;
 }
 
@@ -534,15 +552,15 @@
 }
 
 .admin_panel .main_section .notes_main .notes_header {
-  padding: 10px;
+  padding: 15px;
   background: #f0f0f0;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
 .admin_panel .main_section .notes_main .notes_header p {
-  font-weight: 600;
-  font-size: 20px;
+  font-family: 'Questrial', sans-serif;
+  font-size: 22px;
   color: #555;
 }
 
@@ -554,12 +572,16 @@
   outline: none;
   background: transparent;
   cursor: pointer;
-  padding: 0.4rem 1rem;
-  border: 1px solid green;
   font-size: 14px;
-  color: white;
-  background: green;
   border-radius: 3px;
+  color: #fff;
+  background-color: #00c853;
+  text-align: center;
+  letter-spacing: .5px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
 }
 
 .admin_panel .main_section .notes_main .notes_content {
@@ -579,6 +601,7 @@
   color: #7C8695;
   border-top: 1px solid #e2e2e2;
   padding: 8px;
+  padding: 8px;
   display: -ms-grid;
   display: grid;
       grid-template-areas: 'notes_right notes_center notes_left';
@@ -594,7 +617,7 @@
 }
 
 .admin_panel .main_section .notes_main .notes_content .notes_text .notes_left .note_complete {
-  color: #f16311;
+  color: #F44336;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -610,7 +633,7 @@
 }
 
 .admin_panel .main_section .notes_main .notes_content .notes_text .notes_left .note_check:hover {
-  color: #f16311;
+  color: #F44336;
 }
 
 .admin_panel .main_section .notes_main .notes_content .notes_text .notes_left .delete_note {
@@ -668,7 +691,7 @@
 }
 
 .admin_panel .main_section .news_main {
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: news_main;
   background: #fff;
@@ -681,15 +704,15 @@
 }
 
 .admin_panel .main_section .news_main .news_header {
-  padding: 10px;
+  padding: 15px;
   background: #f0f0f0;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
 .admin_panel .main_section .news_main .news_header p {
-  font-weight: 600;
-  font-size: 20px;
+  font-family: 'Questrial', sans-serif;
+  font-size: 22px;
   color: #555;
 }
 
@@ -761,28 +784,169 @@
   background: #555;
 }
 
-@media (min-width: 1280px) and (max-width: 1500px) {
+.admin_panel .main_section .merchants_main {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: merchants_main;
+  height: 450px;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px #d8d8d8;
+          box-shadow: 0px 0px 10px #d8d8d8;
+  border: 1px solid rgba(212, 212, 212, 0.514);
+  color: #555;
+  position: relative;
+}
+
+.admin_panel .main_section .merchants_main .merchant_btn {
+  position: absolute;
+  top: 7px;
+  right: 20px;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #00c853;
+  text-align: center;
+  letter-spacing: .5px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+}
+
+.admin_panel .main_section .merchants_main .merchants_header {
+  padding: 15px;
+  background: #f0f0f0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.admin_panel .main_section .merchants_main .merchants_header p {
+  font-family: 'Questrial', sans-serif;
+  font-size: 22px;
+  color: #555;
+}
+
+.admin_panel .main_section .merchants_main .merchants_content {
+  padding: 10px;
+  margin-top: 10px;
+  height: 350px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: #7C8695;
+}
+
+.admin_panel .main_section .merchants_main .merchants_content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.admin_panel .main_section .merchants_main .merchants_content::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.admin_panel .main_section .merchants_main .merchants_content::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+.admin_panel .main_section .merchants_main .merchants_content .merchants_table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.admin_panel .main_section .merchants_main .merchants_content .merchants_table thead {
+  background: #cecece;
+}
+
+.admin_panel .main_section .merchants_main .merchants_content .merchants_table .merchant_name_text {
+  color: #136fb6;
+}
+
+.admin_panel .main_section .merchants_main .merchants_content .merchants_table tr {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+}
+
+.admin_panel .main_section .merchants_main .merchants_content .merchants_table tr td, .admin_panel .main_section .merchants_main .merchants_content .merchants_table tr th {
+  font-size: 15px;
+  padding: 10px;
+}
+
+.admin_panel .main_section .merchants_main .merchants_content .merchants_table .edit_merchant {
+  cursor: pointer;
+  color: #35A7FF;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.admin_panel .main_section .merchants_main .merchants_content .merchants_table .edit_merchant i {
+  margin-left: 20px;
+}
+
+.admin_panel .main_section .merchants_main .merchants_content .merchants_table .edit_merchant:hover {
+  color: #0381e0;
+}
+
+.admin_panel .main_section .merchants_main .merchants_content .merchants_table .box_checked {
+  color: #33658A;
+}
+
+.admin_panel .main_section .merchants_main .merchants_content .merchants_table .box_unchecked {
+  color: #C3423F;
+}
+
+.admin_panel .main_section .merchants_main .merchants_content .merchants_table tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+@media (min-width: 1000px) and (max-width: 1800px) {
+  .Urgent {
+    margin-right: 0px;
+    margin-top: 3px;
+    padding: 1px 18px;
+    color: white;
+    border-radius: 30px;
+    font-size: 10px;
+  }
+  .Normal {
+    margin-right: 0px;
+    margin-top: 3px;
+    padding: 1px 18px;
+    color: white;
+    border-radius: 30px;
+    font-size: 10px;
+  }
+  .None {
+    margin-right: 0px;
+    margin-top: 3px;
+    padding: 1px 18px;
+    color: white;
+    border-radius: 30px;
+    font-size: 10px;
+  }
   .admin_panel .main_section {
-    grid-area: main_section;
+    padding: 20px;
+    grid-gap: 20px;
+  }
+  .admin_panel .main_section .first_section {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: 'weather_main notes_main' 'news_main .';
-    -ms-grid-columns: 1fr 60%;
-        grid-template-columns: 1fr 60%;
-    padding: 20px;
-    grid-gap: 15px;
-    background: #F9FAFB;
-    overflow-y: scroll;
-    overflow-x: hidden;
+        grid-template-areas: 'weather_main notes_main';
+    -ms-grid-columns: 35% 65%;
+        grid-template-columns: 35% 65%;
+    grid-gap: 20px;
   }
-  .admin_panel .main_section::-webkit-scrollbar {
-    width: 10px;
-  }
-  .admin_panel .main_section::-webkit-scrollbar-track {
-    background: #ffffff;
-  }
-  .admin_panel .main_section::-webkit-scrollbar-thumb {
-    background: #555;
+  .admin_panel .main_section .second_section {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'merchants_main news_main';
+    -ms-grid-columns: 70% 30%;
+        grid-template-columns: 70% 30%;
+    grid-gap: 20px;
   }
   .admin_panel .main_section .weather_main {
     -ms-grid-row: 1;
@@ -794,23 +958,20 @@
             box-shadow: 0px 0px 10px #d8d8d8;
     border: 1px solid rgba(212, 212, 212, 0.514);
     height: 340px;
-    color: #555;
   }
   .admin_panel .main_section .weather_main .weather_header {
-    padding: 10px;
+    padding: 15px;
     background: #f0f0f0;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
   .admin_panel .main_section .weather_main .weather_header p {
-    font-weight: 600;
-    font-size: 20px;
+    font-family: 'Questrial', sans-serif;
+    font-size: 22px;
     color: #555;
   }
   .admin_panel .main_section .weather_main .weather_content {
-    padding: 5px;
-    margin-right: 20px;
-    margin-left: 20px;
+    padding: 10px;
     margin-top: 5px;
     height: 100px;
   }
@@ -822,11 +983,10 @@
     margin-top: 15px;
     margin-right: 10px;
     float: left;
-    font-size: 25px;
+    font-size: 20px;
   }
   .admin_panel .main_section .weather_main .weather_content .weather_sub .weather_condition {
-    font-size: 18px;
-    color: #7C8695;
+    font-size: 16px;
   }
   .admin_panel .main_section .weather_main .weather_content .today_calender {
     float: right;
@@ -835,34 +995,25 @@
     position: relative;
     bottom: 0;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
   }
   .admin_panel .main_section .weather_main .weather_content .today_calender .today_day {
-    margin-top: 30px;
+    margin-top: 20px;
   }
   .admin_panel .main_section .weather_main .weather_content .today_calender .today_date {
-    margin-top: 10px;
+    margin-top: 5px;
     color: #7C8695;
     font-weight: lighter;
   }
   .admin_panel .main_section .weather_main .weather_additional {
     margin-top: 10px;
+    font-size: 14px;
   }
   .admin_panel .main_section .weather_main .weather_additional p {
     padding: 10px;
   }
   .admin_panel .main_section .weather_main .weather_additional span {
     float: right;
-  }
-  .admin_panel .main_section .weather_main .weather_additional .wind_speed {
-    border-top: 1px solid #e2e2e2;
-  }
-  .admin_panel .main_section .weather_main .weather_additional .humidity {
-    border-top: 1px solid #e2e2e2;
-  }
-  .admin_panel .main_section .weather_main .weather_additional .cloud_cover {
-    border-top: 1px solid #e2e2e2;
-    border-bottom: 1px solid #e2e2e2;
   }
   .admin_panel .main_section .notes_main {
     -ms-grid-row: 1;
@@ -874,18 +1025,17 @@
             box-shadow: 0px 0px 10px #d8d8d8;
     border: 1px solid rgba(212, 212, 212, 0.514);
     height: 340px;
-    color: #555;
     position: relative;
   }
   .admin_panel .main_section .notes_main .notes_header {
-    padding: 10px;
+    padding: 15px;
     background: #f0f0f0;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
   .admin_panel .main_section .notes_main .notes_header p {
-    font-weight: 600;
-    font-size: 20px;
+    font-family: 'Questrial', sans-serif;
+    font-size: 22px;
     color: #555;
   }
   .admin_panel .main_section .notes_main .notes_btn {
@@ -896,34 +1046,34 @@
     outline: none;
     background: transparent;
     cursor: pointer;
-    padding: 0.4rem 1rem;
-    border: 1px solid green;
     font-size: 14px;
-    color: white;
-    background: green;
     border-radius: 3px;
+    color: #fff;
+    background-color: #00c853;
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
   }
   .admin_panel .main_section .notes_main .notes_content {
-    padding: 5px;
-    margin-top: 10px;
+    padding: 6px;
+    margin-top: 20px;
     height: 240px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    color: #7C8695;
-  }
-  .admin_panel .main_section .notes_main .notes_content a {
-    text-decoration: none;
   }
   .admin_panel .main_section .notes_main .notes_content .notes_text {
     color: #7C8695;
     border-top: 1px solid #e2e2e2;
     padding: 8px;
+    padding: 7px;
     display: -ms-grid;
     display: grid;
         grid-template-areas: 'notes_right notes_center notes_left';
-    -ms-grid-columns: 90px 1fr 50px;
-        grid-template-columns: 90px 1fr 50px;
-    grid-gap: 10px;
+    -ms-grid-columns: 85px 1fr 45px;
+        grid-template-columns: 85px 1fr 45px;
+    grid-gap: 0px;
+    font-size: 14px;
   }
   .admin_panel .main_section .notes_main .notes_content .notes_text .notes_left {
     -ms-grid-row: 1;
@@ -931,37 +1081,20 @@
     grid-area: notes_left;
   }
   .admin_panel .main_section .notes_main .notes_content .notes_text .notes_left .note_complete {
-    color: #f16311;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-  }
-  .admin_panel .main_section .notes_main .notes_content .notes_text .notes_left .note_complete:hover {
-    color: transparent;
+    font-size: 14px;
   }
   .admin_panel .main_section .notes_main .notes_content .notes_text .notes_left .note_check {
-    color: transparent;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-  }
-  .admin_panel .main_section .notes_main .notes_content .notes_text .notes_left .note_check:hover {
-    color: #f16311;
+    font-size: 14px;
   }
   .admin_panel .main_section .notes_main .notes_content .notes_text .notes_left .delete_note {
-    float: right;
-    cursor: pointer;
-    display: none;
-    color: #F44336;
+    font-size: 14px;
   }
   .admin_panel .main_section .notes_main .notes_content .notes_text .notes_left .completed_task {
     display: block;
+    font-size: 14px;
   }
   .admin_panel .main_section .notes_main .notes_content .notes_text .notes_left .note_icon {
-    cursor: pointer;
     padding: 2px;
-    border: 2px solid #7C8695;
-  }
-  .admin_panel .main_section .notes_main .notes_content .notes_text .notes_left:hover .delete_note {
-    display: block;
   }
   .admin_panel .main_section .notes_main .notes_content .notes_text .notes_center {
     -ms-grid-row: 1;
@@ -976,18 +1109,9 @@
   .admin_panel .main_section .notes_main .notes_content .notes_text .notes_right .note_label_wrapper {
     float: left;
   }
-  .admin_panel .main_section .notes_main .notes_content::-webkit-scrollbar {
-    width: 10px;
-  }
-  .admin_panel .main_section .notes_main .notes_content::-webkit-scrollbar-track {
-    background: #ffffff;
-  }
-  .admin_panel .main_section .notes_main .notes_content::-webkit-scrollbar-thumb {
-    background: #555;
-  }
   .admin_panel .main_section .news_main {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
     grid-area: news_main;
     background: #fff;
     border-radius: 5px;
@@ -995,18 +1119,16 @@
             box-shadow: 0px 0px 10px #d8d8d8;
     border: 1px solid rgba(212, 212, 212, 0.514);
     height: 450px;
-    width: 170%;
-    color: #555;
   }
   .admin_panel .main_section .news_main .news_header {
-    padding: 10px;
+    padding: 15px;
     background: #f0f0f0;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
   .admin_panel .main_section .news_main .news_header p {
-    font-weight: 600;
-    font-size: 20px;
+    font-family: 'Questrial', sans-serif;
+    font-size: 22px;
     color: #555;
   }
   .admin_panel .main_section .news_main .news_content {
@@ -1016,37 +1138,33 @@
     padding: 5px;
   }
   .admin_panel .main_section .news_main .news_content .news_box {
-    height: 140px;
+    height: 270px;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .admin_panel .main_section .news_main .news_content .news_box .news_image {
-    float: left;
-    width: 35%;
+    float: unset;
+    width: 100%;
   }
   .admin_panel .main_section .news_main .news_content .news_box .news_image img {
-    height: 140px;
-    width: 190px;
+    height: 150px;
+    width: 100%;
     border-radius: 5px;
   }
   .admin_panel .main_section .news_main .news_content .news_box .news_text {
+    font-size: 14px;
     position: relative;
     float: left;
-    width: 60%;
-    height: 150px;
-  }
-  .admin_panel .main_section .news_main .news_content .news_box .news_text a {
-    text-decoration: none;
-    color: #7C8695;
+    width: 100%;
+    height: 110px;
   }
   .admin_panel .main_section .news_main .news_content .news_box .news_text .article_title {
-    margin-top: 15px;
+    margin-top: 0px;
     font-weight: 600;
     letter-spacing: 0.5px;
   }
   .admin_panel .main_section .news_main .news_content .news_box .news_text .article_info {
-    color: #a7a7a7;
-    font-size: 14px;
+    font-size: 13px;
     margin-top: 10px;
   }
   .admin_panel .main_section .news_main .news_content .news_box .news_text .article_info .article_author, .admin_panel .main_section .news_main .news_content .news_box .news_text .article_info .article_date {
@@ -1055,14 +1173,14 @@
   .admin_panel .main_section .news_main .news_content .news_box .news_text .article_info .calendar_icon {
     margin-left: 10px;
   }
-  .admin_panel .main_section .news_main .news_content::-webkit-scrollbar {
-    width: 10px;
+  .admin_panel .main_section .merchants_main .merchants_content .merchants_table {
+    width: 100%;
   }
-  .admin_panel .main_section .news_main .news_content::-webkit-scrollbar-track {
-    background: #ffffff;
+  .admin_panel .main_section .merchants_main .merchants_content .merchants_table thead tr th {
+    font-size: 14px;
   }
-  .admin_panel .main_section .news_main .news_content::-webkit-scrollbar-thumb {
-    background: #555;
+  .admin_panel .main_section .merchants_main .merchants_content .merchants_table tr td {
+    font-size: 14px;
   }
 }
 

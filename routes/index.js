@@ -18,6 +18,8 @@ var User = require('../models/user');
 var Notes = require('../models/notes');
 // Calendar Model
 var Calendar = require('../models/calendar');
+// Merchant Modal
+var Merchant = require('../models/merchant');
 
 // Express session Middleware
 router.use(session({
@@ -84,15 +86,23 @@ router.get('/', ensureAuthenticated, function(req, res, next) {
   let errors = req.validationErrors();
 
   Notes.find({}, function(err, notes){
-    if (err) {
-      console.log(err);
-    }
-    else {
-      res.render('index', {
-        notes: notes,
-        errors: errors
-      })
-    }
+    Merchant.find({}, function(errors, merchants){
+      if (err) {
+        console.log(err);
+      }
+      else if (errors){
+        console.log(errors);
+      }
+      else {
+        res.render('index', {
+          notes: notes,
+          merchants: merchants,
+          errors: errors
+        })
+      }
+    }).sort(
+      { "name": 1 }
+    )
   }).sort(
     { "_id":-1 }
   )
@@ -418,6 +428,72 @@ router.delete("/delete-user/:id",ensureAuthenticated, function(req, res, next){
     }
   });
 })
+
+// ************** MERCHANTS SECTION **************
+// NEW MERCHANT
+router.post("/new_merchant", ensureAuthenticated, function(req, res, next){
+
+  var merchant = new Merchant();
+  merchant.username = req.body.username;
+  merchant.name = req.body.name;
+  merchant.sandbox = req.body.sandbox;
+  merchant.documents = req.body.documents;
+  merchant.contract = req.body.contract;
+  merchant.update = req.body.update;
+
+  merchant.save(function(err){
+    if (err){
+      console.log(err);
+    }
+    else{
+      req.flash('success', 'New Merchant Added');
+      res.redirect('/');
+    }
+  })
+});
+
+// EDIT MERCHANT
+router.post("/edit_merchant", ensureAuthenticated, function(req, res, next){
+
+  var merchant = {};
+  merchant.username = req.body.username;
+  merchant.name = req.body.name;
+  merchant.sandbox = req.body.sandbox;
+  merchant.documents = req.body.documents;
+  merchant.contract = req.body.contract;
+  merchant.update = req.body.update;
+  
+  var query = {_id: req.body.id};
+
+  console.log(query);
+
+  Merchant.update(query, merchant, function(err){
+    if (err){
+      console.log(err);
+    }
+    else{
+      req.flash("success", "Merchant updated");
+      res.redirect("/");
+    }
+  })
+
+});
+
+router.get("/get_merchant/:id", ensureAuthenticated, function(req, res, next){
+
+  var query = req.params.id;
+
+  Merchant.findById(query, function(err, merchant){
+    if (err){
+      console.log(err);
+    }
+    else{
+      res.send(merchant);
+    }
+  })
+
+})
+
 
 // ************** Access control **************
 function ensureAuthenticated(req, res, next){

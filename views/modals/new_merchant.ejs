@@ -1,0 +1,55 @@
+<!-- ADD A TASK MODAL -->
+
+<div class="modal_wrapper modal_9" data-modal="modal_9">
+    <div class="modal_main">
+        <div class="modal_header">
+            <h3>New Merchant <i class="fas fa-tasks"></i></h3>
+            <i class="far fa-times-circle close_modal"></i>
+        </div>
+        <div class="modal_form">
+                <form method="POST" action="/new_merchant">
+                    <div class="input_box hideme">
+                        <input type="text" name="username" value="<%= user.username %>" required>
+                    </div>
+                    <div class="input_box">
+                        <label for="name" class="modal_label">Merchant Name</label>
+                        <br>
+                        <input type="text" name="name" placeholder="Enter merchant Name" autofocus autocomplete="off" required>
+                    </div>
+                    <div class="input_box">
+                        <label for="sandbox" class="modal_label">Sandbox Setup?</label>
+                        <br>
+                        <select name="sandbox" required>
+                            <option disabled selected>Please select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="input_box">
+                        <label for="documents" class="modal_label">Received all documents?</label>
+                        <br>
+                        <select name="documents" required>
+                            <option disabled selected>Please select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="input_box">
+                        <label for="contract" class="modal_label">Signed contract received?</label>
+                        <br>
+                        <select name="contract" required>
+                            <option disabled selected>Please select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="input_box">
+                        <label for="update" class="modal_label">Latest Update?</label>
+                        <br>
+                        <input type="text" name="update" placeholder="Enter latest update" autocomplete="off" required>
+                    </div>
+                    <button class="button_calendar disabled" type="submit">Submit <i class="fas fa-arrow-right submit_arrow"></i></button>
+                </form>
+            </div>
+    </div>
+</div>

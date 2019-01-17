@@ -5,8 +5,10 @@
 .admin_panel{
 
     .add_new_date{
-        @include greenBtn();
+        @include button();
+        @include addNewBtn();
         @include fadeBox();
+        padding: 0.75rem 2rem;
         animation-delay: 1.5s;
         position: absolute;
         left: 800px;

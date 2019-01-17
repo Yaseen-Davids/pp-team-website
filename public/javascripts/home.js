@@ -174,4 +174,27 @@ $(document).ready(function(){
 
     })
 
+    $(".edit_merchant").on('click', function(){
+
+        var id = $(this).attr("data-id");
+
+        $.ajax({
+            url: "/get_merchant/" + id,
+            method: "GET",
+            contentType: "application/json",
+            success: function(response){
+
+                $("#merchant_username").val(response.username);
+                $("#merchant_id").val(response._id);
+                $("#merchant_name").val(response.name);
+                $("#merchant_sandbox").val(response.sandbox);
+                $("#merchant_documents").val(response.documents);
+                $("#merchant_contract").val(response.contract);
+                $("#merchant_update").val(response.update);
+
+            }
+        })
+
+    })
+
 })

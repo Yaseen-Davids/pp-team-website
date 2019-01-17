@@ -51,11 +51,11 @@
   cursor: pointer;
 }
 
-.modal_2 .modal_main, .modal_1 .modal_main, .modal_4 .modal_main, .modal_5 .modal_main {
+.modal_2 .modal_main, .modal_1 .modal_main, .modal_4 .modal_main, .modal_5 .modal_main, .modal_9 .modal_main, .modal_10 .modal_main {
   position: relative;
 }
 
-.modal_2 .modal_main .modal_form, .modal_1 .modal_main .modal_form, .modal_4 .modal_main .modal_form, .modal_5 .modal_main .modal_form {
+.modal_2 .modal_main .modal_form, .modal_1 .modal_main .modal_form, .modal_4 .modal_main .modal_form, .modal_5 .modal_main .modal_form, .modal_9 .modal_main .modal_form, .modal_10 .modal_main .modal_form {
   position: absolute;
   left: 50%;
   top: 80px;
@@ -63,19 +63,20 @@
           transform: translate(-50%, 0%);
 }
 
-.modal_2 .modal_main .modal_form .input_box, .modal_1 .modal_main .modal_form .input_box, .modal_4 .modal_main .modal_form .input_box, .modal_5 .modal_main .modal_form .input_box {
+.modal_2 .modal_main .modal_form .input_box, .modal_1 .modal_main .modal_form .input_box, .modal_4 .modal_main .modal_form .input_box, .modal_5 .modal_main .modal_form .input_box, .modal_9 .modal_main .modal_form .input_box, .modal_10 .modal_main .modal_form .input_box {
   margin-top: 10px;
   padding: 15px;
   width: 100%;
 }
 
-.modal_2 .modal_main .modal_form .input_box label, .modal_1 .modal_main .modal_form .input_box label, .modal_4 .modal_main .modal_form .input_box label, .modal_5 .modal_main .modal_form .input_box label {
+.modal_2 .modal_main .modal_form .input_box label, .modal_1 .modal_main .modal_form .input_box label, .modal_4 .modal_main .modal_form .input_box label, .modal_5 .modal_main .modal_form .input_box label, .modal_9 .modal_main .modal_form .input_box label, .modal_10 .modal_main .modal_form .input_box label {
   color: #7C8695;
   margin-left: 5px;
   font-size: 14px;
+  margin-bottom: 5px;
 }
 
-.modal_2 .modal_main .modal_form .input_box select, .modal_1 .modal_main .modal_form .input_box select, .modal_4 .modal_main .modal_form .input_box select, .modal_5 .modal_main .modal_form .input_box select {
+.modal_2 .modal_main .modal_form .input_box select, .modal_1 .modal_main .modal_form .input_box select, .modal_4 .modal_main .modal_form .input_box select, .modal_5 .modal_main .modal_form .input_box select, .modal_9 .modal_main .modal_form .input_box select, .modal_10 .modal_main .modal_form .input_box select {
   border: 1px solid #D9D9D9;
   padding: 10px;
   width: 300px;
@@ -83,7 +84,7 @@
   color: #7C8695;
 }
 
-.modal_2 .modal_main .modal_form .input_box input, .modal_1 .modal_main .modal_form .input_box input, .modal_4 .modal_main .modal_form .input_box input, .modal_5 .modal_main .modal_form .input_box input {
+.modal_2 .modal_main .modal_form .input_box input, .modal_1 .modal_main .modal_form .input_box input, .modal_4 .modal_main .modal_form .input_box input, .modal_5 .modal_main .modal_form .input_box input, .modal_9 .modal_main .modal_form .input_box input, .modal_10 .modal_main .modal_form .input_box input {
   border: none;
   outline: none;
   border-bottom: 1px solid #D9D9D9;
@@ -91,44 +92,43 @@
   height: 40px;
   width: 300px;
   font-size: 16px;
-  font-weight: 600;
   color: #7C8695;
 }
 
-.modal_2 .modal_main .modal_form .input_box input:focus, .modal_1 .modal_main .modal_form .input_box input:focus, .modal_4 .modal_main .modal_form .input_box input:focus, .modal_5 .modal_main .modal_form .input_box input:focus {
+.modal_2 .modal_main .modal_form .input_box input:focus, .modal_1 .modal_main .modal_form .input_box input:focus, .modal_4 .modal_main .modal_form .input_box input:focus, .modal_5 .modal_main .modal_form .input_box input:focus, .modal_9 .modal_main .modal_form .input_box input:focus, .modal_10 .modal_main .modal_form .input_box input:focus {
   border-bottom-color: #333;
 }
 
-.modal_2 .modal_main .modal_form .input_box input::-webkit-input-placeholder, .modal_1 .modal_main .modal_form .input_box input::-webkit-input-placeholder, .modal_4 .modal_main .modal_form .input_box input::-webkit-input-placeholder, .modal_5 .modal_main .modal_form .input_box input::-webkit-input-placeholder {
+.modal_2 .modal_main .modal_form .input_box input::-webkit-input-placeholder, .modal_1 .modal_main .modal_form .input_box input::-webkit-input-placeholder, .modal_4 .modal_main .modal_form .input_box input::-webkit-input-placeholder, .modal_5 .modal_main .modal_form .input_box input::-webkit-input-placeholder, .modal_9 .modal_main .modal_form .input_box input::-webkit-input-placeholder, .modal_10 .modal_main .modal_form .input_box input::-webkit-input-placeholder {
   font-weight: 600;
   color: #7C8695;
 }
 
-.modal_2 .modal_main .modal_form .input_box input:-ms-input-placeholder, .modal_1 .modal_main .modal_form .input_box input:-ms-input-placeholder, .modal_4 .modal_main .modal_form .input_box input:-ms-input-placeholder, .modal_5 .modal_main .modal_form .input_box input:-ms-input-placeholder {
+.modal_2 .modal_main .modal_form .input_box input:-ms-input-placeholder, .modal_1 .modal_main .modal_form .input_box input:-ms-input-placeholder, .modal_4 .modal_main .modal_form .input_box input:-ms-input-placeholder, .modal_5 .modal_main .modal_form .input_box input:-ms-input-placeholder, .modal_9 .modal_main .modal_form .input_box input:-ms-input-placeholder, .modal_10 .modal_main .modal_form .input_box input:-ms-input-placeholder {
   font-weight: 600;
   color: #7C8695;
 }
 
-.modal_2 .modal_main .modal_form .input_box input::-ms-input-placeholder, .modal_1 .modal_main .modal_form .input_box input::-ms-input-placeholder, .modal_4 .modal_main .modal_form .input_box input::-ms-input-placeholder, .modal_5 .modal_main .modal_form .input_box input::-ms-input-placeholder {
+.modal_2 .modal_main .modal_form .input_box input::-ms-input-placeholder, .modal_1 .modal_main .modal_form .input_box input::-ms-input-placeholder, .modal_4 .modal_main .modal_form .input_box input::-ms-input-placeholder, .modal_5 .modal_main .modal_form .input_box input::-ms-input-placeholder, .modal_9 .modal_main .modal_form .input_box input::-ms-input-placeholder, .modal_10 .modal_main .modal_form .input_box input::-ms-input-placeholder {
   font-weight: 600;
   color: #7C8695;
 }
 
-.modal_2 .modal_main .modal_form .input_box input::placeholder, .modal_1 .modal_main .modal_form .input_box input::placeholder, .modal_4 .modal_main .modal_form .input_box input::placeholder, .modal_5 .modal_main .modal_form .input_box input::placeholder {
+.modal_2 .modal_main .modal_form .input_box input::placeholder, .modal_1 .modal_main .modal_form .input_box input::placeholder, .modal_4 .modal_main .modal_form .input_box input::placeholder, .modal_5 .modal_main .modal_form .input_box input::placeholder, .modal_9 .modal_main .modal_form .input_box input::placeholder, .modal_10 .modal_main .modal_form .input_box input::placeholder {
   font-weight: 600;
   color: #7C8695;
 }
 
-.modal_2 .modal_main .modal_form .input_box .calendar_date, .modal_1 .modal_main .modal_form .input_box .calendar_date, .modal_4 .modal_main .modal_form .input_box .calendar_date, .modal_5 .modal_main .modal_form .input_box .calendar_date {
+.modal_2 .modal_main .modal_form .input_box .calendar_date, .modal_1 .modal_main .modal_form .input_box .calendar_date, .modal_4 .modal_main .modal_form .input_box .calendar_date, .modal_5 .modal_main .modal_form .input_box .calendar_date, .modal_9 .modal_main .modal_form .input_box .calendar_date, .modal_10 .modal_main .modal_form .input_box .calendar_date {
   width: 160px;
 }
 
-.modal_2 .modal_main .modal_form .input_box #color_input, .modal_1 .modal_main .modal_form .input_box #color_input, .modal_4 .modal_main .modal_form .input_box #color_input, .modal_5 .modal_main .modal_form .input_box #color_input {
+.modal_2 .modal_main .modal_form .input_box #color_input, .modal_1 .modal_main .modal_form .input_box #color_input, .modal_4 .modal_main .modal_form .input_box #color_input, .modal_5 .modal_main .modal_form .input_box #color_input, .modal_9 .modal_main .modal_form .input_box #color_input, .modal_10 .modal_main .modal_form .input_box #color_input {
   width: 60px;
   border: none;
 }
 
-.modal_2 .modal_main .modal_form .button_calendar, .modal_1 .modal_main .modal_form .button_calendar, .modal_4 .modal_main .modal_form .button_calendar, .modal_5 .modal_main .modal_form .button_calendar {
+.modal_2 .modal_main .modal_form .button_calendar, .modal_1 .modal_main .modal_form .button_calendar, .modal_4 .modal_main .modal_form .button_calendar, .modal_5 .modal_main .modal_form .button_calendar, .modal_9 .modal_main .modal_form .button_calendar, .modal_10 .modal_main .modal_form .button_calendar {
   outline: none;
   width: 300px;
   border: none;
@@ -144,14 +144,14 @@
   margin-top: 25px;
 }
 
-.modal_2 .modal_main .modal_form .button_calendar .submit_arrow, .modal_1 .modal_main .modal_form .button_calendar .submit_arrow, .modal_4 .modal_main .modal_form .button_calendar .submit_arrow, .modal_5 .modal_main .modal_form .button_calendar .submit_arrow {
+.modal_2 .modal_main .modal_form .button_calendar .submit_arrow, .modal_1 .modal_main .modal_form .button_calendar .submit_arrow, .modal_4 .modal_main .modal_form .button_calendar .submit_arrow, .modal_5 .modal_main .modal_form .button_calendar .submit_arrow, .modal_9 .modal_main .modal_form .button_calendar .submit_arrow, .modal_10 .modal_main .modal_form .button_calendar .submit_arrow {
   color: transparent;
   margin-left: 0px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-.modal_2 .modal_main .modal_form .button_calendar:hover .submit_arrow, .modal_1 .modal_main .modal_form .button_calendar:hover .submit_arrow, .modal_4 .modal_main .modal_form .button_calendar:hover .submit_arrow, .modal_5 .modal_main .modal_form .button_calendar:hover .submit_arrow {
+.modal_2 .modal_main .modal_form .button_calendar:hover .submit_arrow, .modal_1 .modal_main .modal_form .button_calendar:hover .submit_arrow, .modal_4 .modal_main .modal_form .button_calendar:hover .submit_arrow, .modal_5 .modal_main .modal_form .button_calendar:hover .submit_arrow, .modal_9 .modal_main .modal_form .button_calendar:hover .submit_arrow, .modal_10 .modal_main .modal_form .button_calendar:hover .submit_arrow {
   color: white;
   margin-left: 10px;
 }
@@ -353,13 +353,15 @@
   outline: none;
   background: transparent;
   cursor: pointer;
-  padding: 0.75rem 2rem;
-  background: #3c9600;
-  color: white;
-  border-radius: 4px;
-  font-size: 16px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #00c853;
+  text-align: center;
+  letter-spacing: .5px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
   -webkit-animation: fadeBox;
           animation: fadeBox;
   -webkit-animation-delay: 1s;
@@ -370,17 +372,13 @@
           animation-fill-mode: forwards;
   -webkit-transform: scale(0);
           transform: scale(0);
+  padding: 0.75rem 2rem;
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
   position: absolute;
   left: 800px;
   top: 97px;
   z-index: 100;
-}
-
-.admin_panel .add_new_date:hover {
-  -webkit-box-shadow: 0 0 10px #555;
-          box-shadow: 0 0 10px #555;
 }
 
 @-webkit-keyframes fadeBox {

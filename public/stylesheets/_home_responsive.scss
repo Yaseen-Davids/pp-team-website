@@ -1,30 +1,57 @@
-@media (min-width: 1280px)
-and (max-width:1500px){
+@media (min-width:1000px)
+and (max-width:1800px){
 
-    // ************** ADMIN PANEL **************
+    $textFont: 14px;
+    @mixin importanceNote{
+        padding:  1px 18px;
+        color: white;
+        border-radius: 30px;
+        font-size: 10px;
+    }
+
+    .Urgent{
+        margin-right: 0px;
+        margin-top: 3px;
+        @include importanceNote();
+    }
+    .Normal{
+        margin-right: 0px;
+        margin-top: 3px;
+        @include importanceNote();
+    }
+    .None{
+        margin-right: 0px;
+        margin-top: 3px;
+        @include importanceNote();
+    }
+
     .admin_panel{
-        
-        // ************** MAIN SECTION **************
+
         .main_section{
-            grid-area: main_section;
-            display: grid;
-            grid-template-areas: 'weather_main notes_main'
-            'news_main .'
-            ;
-            grid-template-columns: 1fr 60%;
             padding: 20px;
-            grid-gap: 15px;
-            background: #F9FAFB;
-            overflow-y: scroll;
-            overflow-x: hidden;
-            @include scrollbar();
+            grid-gap: 20px;
+
+            .first_section{
+                display: grid;
+                grid-template-areas: 'weather_main notes_main'
+                ;
+                grid-template-columns: 35% 65%;
+                grid-gap: 20px;
+            }
+            
+            .second_section{
+                display: grid;
+                grid-template-areas: 'merchants_main news_main'
+                ;
+                grid-template-columns: 70% 30%;
+                grid-gap: 20px;
+            }
 
             // ************** WEATHER MAIN **************
             .weather_main{
                 grid-area: weather_main;
                 @include panelBox();
                 height: 340px;
-                color: $boxHeaderColor;
 
                 // ************** WEATHER HEADER **************
                 .weather_header{
@@ -33,9 +60,7 @@ and (max-width:1500px){
 
                 //  WEATHER CONTENT
                 .weather_content{
-                    padding: 5px;
-                    margin-right: 20px;
-                    margin-left: 20px;
+                    padding: 10px;
                     margin-top: 5px;
                     height: 100px;
                     // WEATHER ICON
@@ -47,12 +72,11 @@ and (max-width:1500px){
                             margin-top: 15px;
                             margin-right: 10px;
                             float: left;
-                            font-size: 25px;
+                            font-size: 20px;
                         }
                         // WEATHER CONDITION
                         .weather_condition{
-                            font-size: 18px;
-                            color: $boxTextColor;
+                            font-size: 16px;
                         }
                     }
                     // CALENDER
@@ -62,14 +86,14 @@ and (max-width:1500px){
                             position: relative;
                             bottom: 0;
                             font-weight: 600;
-                            font-size: 18px;
+                            font-size: $textFont;
                         }
                         .today_day{
-                            margin-top: 30px;
+                            margin-top: 20px;
                         }
                         // TODAY'S DATE
                         .today_date{
-                            margin-top: 10px;
+                            margin-top: 5px;
                             color: $boxTextColor;
                             font-weight: lighter;
                         }
@@ -78,34 +102,20 @@ and (max-width:1500px){
                 // WEATHER ADDITIONAL
                 .weather_additional{
                     margin-top: 10px;
+                    font-size: $textFont;
                     p{
                         padding: 10px;
                     }
                     span{
                         float: right;
                     }
-                    // WIND SPEED
-                    .wind_speed{
-                        border-top: 1px solid #e2e2e2;
-                    }
-                    // HUMIDITY
-                    .humidity{
-                        border-top: 1px solid #e2e2e2;
-                    }
-                    // CLOUD COVER
-                    .cloud_cover{
-                        border-top: 1px solid #e2e2e2;
-                        border-bottom: 1px solid #e2e2e2;
-                    }
                 }
             }
 
-            // NOTES MAIN
             .notes_main{
                 grid-area: notes_main;
                 @include panelBox();
                 height: 340px;
-                color: $boxHeaderColor;
                 position: relative;
                 
                 //  NOTES HEADER
@@ -117,72 +127,45 @@ and (max-width:1500px){
                     top: 7px;
                     right: 20px;
                     @include button();
-                    padding: 0.4rem 1rem;
-                    border: 1px solid green;
                     font-size: 14px;
-                    color: white;
-                    background: green;
-                    border-radius: 3px;
+                    @include addNewBtn();
                 }
                 // NOTES CONTENT
                 .notes_content{
-                    padding: 5px;
-                    margin-top: 10px;
+                    padding: 6px;
+                    margin-top: 20px;
                     height: 240px;
-                    overflow-y: scroll;
-                    overflow-x: hidden;
-                    color: #7C8695;
-                    a{
-                        text-decoration: none;
-                    }
                     // NOTES TEXT
                     .notes_text{
-                        color: $boxTextColor;
-                        border-top: 1px solid #e2e2e2;
-                        padding: 8px;
+                        @include contentSection();
+                        padding: 7px;
                         display: grid;
                         grid-template-areas: 'notes_right notes_center notes_left'
                         ;
-                        grid-template-columns: 90px 1fr 50px;
-                        grid-gap: 10px;
-
+                        grid-template-columns: 85px 1fr 45px;
+                        grid-gap: 0px;
+                        font-size: $textFont;
+    
                         // NOTES LEFT
                         .notes_left{
                             grid-area: notes_left;
                             // NOTES COMPLETE
                             .note_complete{
-                                color: #f16311;
-                                transition: all 0.2s;
-                                &:hover{
-                                    color: transparent;
-                                }
+                                font-size: $textFont;
                             }
                             // NOTES CHECK
                             .note_check{
-                                color: transparent;
-                                transition: all 0.2s;
-                                &:hover{
-                                    color: #f16311;
-                                }
+                                font-size: $textFont;
                             }
                             .delete_note{
-                                float: right;
-                                cursor: pointer;
-                                display: none;
-                                color: #F44336;
+                                font-size: $textFont;
                             }
                             .completed_task{
                                 display: block;
+                                font-size: $textFont;
                             }
                             .note_icon{
-                                cursor: pointer;
                                 padding: 2px;
-                                border: 2px solid $boxTextColor;
-                            }
-                            &:hover{
-                                .delete_note{
-                                    display: block;
-                                }
                             }
                         }
                         // NOTES CENTER
@@ -197,16 +180,13 @@ and (max-width:1500px){
                             }
                         }
                     }
-                    @include scrollbar();
                 }
             }
             .news_main{
                 grid-area: news_main;
                 @include panelBox();
                 height: 450px;
-                width: 170%;
-                color: $boxHeaderColor;
-
+    
                 .news_header{
                     @include boxHeaderSection();
                 }
@@ -216,35 +196,34 @@ and (max-width:1500px){
                     overflow-x: hidden;
                     padding: 5px;
                     .news_box{
-                        height: 140px;
+                        // border: $border;
+                        height: 270px;
                         width: 100%;
-                        margin-bottom: 10px;
+                        margin-bottom: 20px;
                         .news_image{
-                            float: left;
-                            width: 35%;
+                            // border: $border;
+                            float: unset;
+                            width: 100%;
                             img{
-                                height: 140px;
-                                width: 190px;
+                                height: 150px;
+                                width: 100%;
                                 border-radius: 5px;
                             }
                         }
                         .news_text{
+                            // border: $border;
+                            font-size: $textFont;
                             position: relative;
                             float: left;
-                            width: 60%;
-                            height: 150px;
-                            a{
-                                text-decoration: none;
-                                color: $boxTextColor;
-                            }
+                            width: 100%;
+                            height: 110px;
                             .article_title{
-                                margin-top: 15px;
+                                margin-top: 0px;
                                 font-weight: 600;
                                 letter-spacing: 0.5px;
                             }
                             .article_info{
-                                color: #a7a7a7;
-                                font-size: 14px;
+                                font-size: 13px;
                                 margin-top: 10px;
                                 .article_author, .article_date{
                                     margin-left: 5px;
@@ -255,7 +234,25 @@ and (max-width:1500px){
                             }
                         }
                     }
-                    @include scrollbar();
+                }
+            }
+            .merchants_main{
+                .merchants_content{
+                    .merchants_table{
+                        width: 100%;
+                        thead{
+                            tr{
+                                th{
+                                    font-size: $textFont;
+                                }
+                            }
+                        }
+                        tr{
+                            td{
+                                font-size: $textFont;
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -1,0 +1,56 @@
+<!-- ADD A TASK MODAL -->
+
+<div class="modal_wrapper modal_10" data-modal="modal_10">
+    <div class="modal_main">
+        <div class="modal_header">
+            <h3>Edit Merchant <i class="fas fa-tasks"></i></h3>
+            <i class="far fa-times-circle close_modal"></i>
+        </div>
+        <div class="modal_form">
+                <form method="POST" action="/edit_merchant">
+                    <div class="input_box hideme">
+                        <input type="text" name="username" id="merchant_username" required>
+                        <input type="text" name="id" id="merchant_id" required>
+                    </div>
+                    <div class="input_box">
+                        <label for="name" class="modal_label">Merchant Name</label>
+                        <br>
+                        <input type="text" name="name" id="merchant_name" placeholder="Loading..." autofocus autocomplete="off" required>
+                    </div>
+                    <div class="input_box">
+                        <label for="sandbox" class="modal_label">Sandbox Setup?</label>
+                        <br>
+                        <select name="sandbox" id="merchant_sandbox" required>
+                            <option disabled selected>Please select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="input_box">
+                        <label for="documents" class="modal_label">Received all documents?</label>
+                        <br>
+                        <select name="documents" id="merchant_documents" required>
+                            <option disabled selected>Please select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="input_box">
+                        <label for="contract" class="modal_label">Signed contract received?</label>
+                        <br>
+                        <select name="contract" id="merchant_contract" required>
+                            <option disabled selected>Please select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="input_box">
+                        <label for="update" class="modal_label">Latest Update?</label>
+                        <br>
+                        <input type="text" name="update" id="merchant_update" placeholder="Loading..." autocomplete="off" required>
+                    </div>
+                    <button class="button_calendar disabled" type="submit">Submit <i class="fas fa-arrow-right submit_arrow"></i></button>
+                </form>
+            </div>
+    </div>
+</div>

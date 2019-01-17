@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Questrial" rel="stylesheet">
 </head>
 <body>
 
@@ -32,6 +32,8 @@
             <!-- MODALS -->
             <%- include('./modals/task_modal', locals) %>
             <%- include('./modals/task_edit', locals) %>
+            <%- include('./modals/new_merchant', locals) %>
+            <%- include('./modals/edit_merchant', locals) %>
 
             <!-- LABELS -->
             <%- include('./labels/label', locals) %>
@@ -60,83 +62,141 @@
                 <!-- MAIN SECTION -->
                 <div class="main_section">
 
-                    <!-- WEATHER MAIN -->
-                    <div class="weather_main">
-                        <!-- WEATHER HEADER -->
-                        <div class="weather_header">
-                            <p>Weather</p>
-                        </div>
-                        <!-- WEATHER CONTENT -->
-                        <div class="weather_content">
-                            <!-- WEATHER SUBSECTION -->
-                            <div class="weather_sub">
-                                <p class="weather_temp_text"></p>
-                                <span class="weather_icon"></span>
-                                <p class="weather_condition"></p>
-                            </div>
-                            <!-- TODAY'S CALENDER -->
-                            <div class="today_calender">
-                                <p class="today_day"></p>
-                                <p class="today_date"></p>
-                            </div>
-                        </div>
-                        <!-- WEATHER ADDITIONAL -->
-                        <div class="weather_additional">
-                            <p class="wind_speed">Wind <span class="wind_text"></span></p>
-                            <p class="humidity">Humidity <span class="humidity_text"></span></p>
-                            <p class="cloud_cover">Cloud <span class="cloud_text"></span></p>
-                        </div>
-                    </div>
+                    <div class="first_section">
 
-                    <div class="notes_main">
-                        <div class="notes_header">
-                            <p>Todo List</p>
-                            <button data-modal="modal_1" class="notes_btn modal_btn"><i class="fas fa-plus"></i> Add task</button>
+                        <!-- WEATHER MAIN -->
+                        <div class="weather_main">
+                            <!-- WEATHER HEADER -->
+                            <div class="weather_header">
+                                <p>Weather</p>
+                            </div>
+                            <!-- WEATHER CONTENT -->
+                            <div class="weather_content">
+                                <!-- WEATHER SUBSECTION -->
+                                <div class="weather_sub">
+                                    <p class="weather_temp_text"></p>
+                                    <span class="weather_icon"></span>
+                                    <p class="weather_condition"></p>
+                                </div>
+                                <!-- TODAY'S CALENDER -->
+                                <div class="today_calender">
+                                    <p class="today_day"></p>
+                                    <p class="today_date"></p>
+                                </div>
+                            </div>
+                            <!-- WEATHER ADDITIONAL -->
+                            <div class="weather_additional">
+                                <p class="wind_speed">Wind <span class="wind_text"></span></p>
+                                <p class="humidity">Humidity <span class="humidity_text"></span></p>
+                                <p class="cloud_cover">Cloud <span class="cloud_text"></span></p>
+                            </div>
                         </div>
-                        <div class="notes_content">
-                            <% for (let i = 0; i < notes.length; i++) { %>
-                                <% if (notes[i].username != user.username) { %>
-                                    <p id="notes_length"></p>
-                                <% } else { %>
-                                    <% if (notes[i].username == user.username) { %>
-                                        <% if (notes[i].completed == 'true') { %>
-                                            <p class="notes_text visible">
-                                                <span class="notes_left">
-                                                    <span><i data-id="<%= notes[i].id %>" class="fas fa-check note_complete note_icon label_main" data-label="label_5"></i></span>
-                                                    <span class="delete_note completed_task label_main" data-id="<%= notes[i].id %>" data-label="label_3"><i class="fas fa-trash-alt"></i></span>
-                                                </span>
-                                                <span class="notes_center">
+    
+                        <div class="notes_main">
+                            <div class="notes_header">
+                                <p>Todo List</p>
+                                <button data-modal="modal_1" class="notes_btn modal_btn"><i class="fas fa-plus"></i> Add task</button>
+                            </div>
+                            <div class="notes_content">
+                                <% for (let i = 0; i < notes.length; i++) { %>
+                                    <% if (notes[i].username != user.username) { %>
+                                        <p id="notes_length"></p>
+                                    <% } else { %>
+                                        <% if (notes[i].username == user.username) { %>
+                                            <% if (notes[i].completed == 'true') { %>
+                                                <p class="notes_text visible">
+                                                    <span class="notes_left">
+                                                        <span><i data-id="<%= notes[i].id %>" class="fas fa-check note_complete note_icon label_main" data-label="label_5"></i></span>
+                                                        <span class="delete_note completed_task label_main" data-id="<%= notes[i].id %>" data-label="label_3"><i class="fas fa-trash-alt"></i></span>
+                                                    </span>
+                                                    <span class="notes_center">
+                                                            <span data-id="<%= notes[i].id %>" class="notes_notes modal_btn" data-modal="modal_5"><%= notes[i].note %></span>
+                                                    </span>
+                                                    <span class="notes_right">
+                                                        <span class="note_label_wrapper"><span class="<%= notes[i].importance %> note_label"><%= notes[i].importance %></span></span>
+                                                    </span>
+                                                </p>
+                                            <% } else { %>
+                                                <p class="notes_text visible">
+                                                    <span class="notes_left">
+                                                        <span><i data-id="<%= notes[i].id %>" data-label="label_4" class="fas fa-check note_check note_icon label_main"></i></span>
+                                                        <span class="delete_note label_main" data-label="label_3" data-id="<%= notes[i].id %>"><i class="fas fa-trash-alt"></i></span>
+                                                    </span>
+                                                    <span class="notes_center">
                                                         <span data-id="<%= notes[i].id %>" class="notes_notes modal_btn" data-modal="modal_5"><%= notes[i].note %></span>
-                                                </span>
-                                                <span class="notes_right">
-                                                    <span class="note_label_wrapper"><span class="<%= notes[i].importance %> note_label"><%= notes[i].importance %></span></span>
-                                                </span>
-                                            </p>
-                                        <% } else { %>
-                                            <p class="notes_text visible">
-                                                <span class="notes_left">
-                                                    <span><i data-id="<%= notes[i].id %>" data-label="label_4" class="fas fa-check note_check note_icon label_main"></i></span>
-                                                    <span class="delete_note label_main" data-label="label_3" data-id="<%= notes[i].id %>"><i class="fas fa-trash-alt"></i></span>
-                                                </span>
-                                                <span class="notes_center">
-                                                    <span data-id="<%= notes[i].id %>" class="notes_notes modal_btn" data-modal="modal_5"><%= notes[i].note %></span>
-                                                </span>
-                                                <span class="notes_right">
-                                                    <span class="note_label_wrapper"><span class="<%= notes[i].importance %> note_label"><%= notes[i].importance %></span></span>
-                                                </span>
-                                            </p>
+                                                    </span>
+                                                    <span class="notes_right">
+                                                        <span class="note_label_wrapper"><span class="<%= notes[i].importance %> note_label"><%= notes[i].importance %></span></span>
+                                                    </span>
+                                                </p>
+                                            <% } %>
                                         <% } %>
                                     <% } %>
                                 <% } %>
-                            <% } %>
+                            </div>
                         </div>
+
                     </div>
 
-                    <div class="news_main">
-                        <div class="news_header">
-                            <p>Latest News</p>
+                    <div class="second_section">
+
+                        <div class="news_main">
+                            <div class="news_header">
+                                <p>Latest News</p>
+                            </div>
+                            <div class="news_content"></div>
                         </div>
-                        <div class="news_content"></div>
+
+                        <div class="merchants_main">
+                            <div class="merchants_header">
+                                <p>My Merchants</p>
+                                <button class="merchant_btn modal_btn" data-modal="modal_9"><i class="fas fa-plus"></i> Add New</button>
+                            </div>
+                            <div class="merchants_content">
+                                <table class="merchants_table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Sandbox</th>
+                                            <th>Docs</th>
+                                            <th>Contract</th>
+                                            <th>Update</th>
+                                            <th>Options</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% for (let n = 0; n < merchants.length; n++){ %>
+                                            <% if (merchants[n].username == user.username) { %>
+                                                <tr>
+                                                    <td class="merchant_name_text"><%= merchants[n].name %></td>
+                                                    <% if (merchants[n].sandbox == "yes"){ %>
+                                                        <td><i class="far fa-check-square box_checked"></i></td>
+                                                    <% } %>
+                                                    <% if (merchants[n].sandbox == "no"){ %>
+                                                        <td><i class="far fa-square box_unchecked"></i></td>
+                                                    <% } %>
+                                                    <% if (merchants[n].documents == "yes"){ %>
+                                                        <td><i class="far fa-check-square box_checked"></i></td>
+                                                    <% } %>
+                                                    <% if (merchants[n].documents == "no"){ %>
+                                                        <td><i class="far fa-square box_unchecked"></i></td>
+                                                    <% } %>
+                                                    <% if (merchants[n].contract == "yes"){ %>
+                                                        <td><i class="far fa-check-square box_checked"></i></td>
+                                                    <% } %>
+                                                    <% if (merchants[n].contract == "no"){ %>
+                                                        <td><i class="far fa-square box_unchecked"></i></td>
+                                                    <% } %>
+                                                    <td><%= merchants[n].update %></td>
+                                                    <td class="modal_btn edit_merchant" data-modal="modal_10" data-id="<%= merchants[n].id %>"><i class="fas fa-edit"></i></td>
+                                                </tr>
+                                            <% } %>
+                                        <% } %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>

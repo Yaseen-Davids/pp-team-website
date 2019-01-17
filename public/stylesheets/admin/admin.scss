@@ -41,7 +41,7 @@
                         text-align: left;
                         padding: 10px;
                         .fa-times{
-                            color: red;
+                            color: $deleteRed;
                         }
                         .fa-check{
                             color: green;
@@ -64,10 +64,10 @@
                                 color: rgb(42, 180, 42);
                             }
                             .new_password{
-                                color: rgb(28, 132, 250);
+                                color: $editBlue;
                             }
                             .dlt_user_btn{
-                                color: red;
+                                color: $deleteRed;
                             }
                         }
                     }

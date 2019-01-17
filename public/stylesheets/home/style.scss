@@ -12,7 +12,7 @@
 }
 
 .Urgent{
-    background: #F44336;
+    background: $deleteRed;
     @include importanceNote();
     margin-right: 5px;
     text-decoration: none;
@@ -35,21 +35,36 @@
 
 // ************** ADMIN PANEL **************
 .admin_panel{
-    
+
     // ************** MAIN SECTION **************
     .main_section{
         grid-area: main_section;
         display: grid;
-        grid-template-areas: 'weather_main notes_main'
-        'news_main .'
+        grid-template-areas: 'first_section'
+        'second_section'
         ;
-        grid-template-columns: 1fr 60%;
-        padding: 20px;
-        grid-gap: 10px;
-        // background: #F9FAFB;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
         overflow-y: scroll;
         overflow-x: hidden;
         @include scrollbar();
+        padding: 10px;
+
+        .first_section{
+            display: grid;
+            grid-template-areas: 'weather_main notes_main'
+            ;
+            grid-template-columns: 1fr 65%;
+            grid-gap: 20px;
+        }
+        
+        .second_section{
+            display: grid;
+            grid-template-areas: 'news_main merchants_main'
+            ;
+            grid-template-columns: 40% 1fr;
+            grid-gap: 20px;
+        }
 
         // ************** WEATHER MAIN **************
         .weather_main{
@@ -147,12 +162,8 @@
                 top: 7px;
                 right: 20px;
                 @include button();
-                padding: 0.4rem 1rem;
-                border: 1px solid green;
                 font-size: 14px;
-                color: white;
-                background: green;
-                border-radius: 3px;
+                @include addNewBtn();
             }
             // NOTES CONTENT
             .notes_content{
@@ -167,8 +178,7 @@
                 }
                 // NOTES TEXT
                 .notes_text{
-                    color: $boxTextColor;
-                    border-top: 1px solid #e2e2e2;
+                    @include contentSection();
                     padding: 8px;
                     display: grid;
                     grid-template-areas: 'notes_right notes_center notes_left'
@@ -181,7 +191,7 @@
                         grid-area: notes_left;
                         // NOTES COMPLETE
                         .note_complete{
-                            color: #f16311;
+                            color: $deleteRed;
                             transition: all 0.2s;
                             &:hover{
                                 color: transparent;
@@ -192,14 +202,14 @@
                             color: transparent;
                             transition: all 0.2s;
                             &:hover{
-                                color: #f16311;
+                                color: $deleteRed;
                             }
                         }
                         .delete_note{
                             float: right;
                             cursor: pointer;
                             display: none;
-                            color: #F44336;
+                            color: $deleteRed;
                         }
                         .completed_task{
                             display: block;
@@ -289,6 +299,76 @@
                     }
                 }
                 @include scrollbar();
+            }
+        }
+        .merchants_main{
+            grid-area: merchants_main;
+            height: 450px;
+            @include panelBox();
+            color: $boxHeaderColor;
+            position: relative;
+
+            .merchant_btn{
+                position: absolute;
+                top: 7px;
+                right: 20px;
+                @include button();
+                font-size: 14px;
+                @include addNewBtn();
+            }
+            
+            //  NOTES HEADER
+            .merchants_header{
+                @include boxHeaderSection();
+            }
+            .merchants_content{
+                padding: 10px;
+                margin-top: 10px;
+                height: 350px;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                color: #7C8695;
+                @include scrollbar();
+
+                .merchants_table{
+                    border-collapse: collapse;
+                    width: 100%;
+                    thead{
+                        background: #cecece;
+                    }
+                    .merchant_name_text{
+                        color: rgb(19, 111, 182);
+                    }
+                    tr{
+                        border: 1px solid #dddddd;
+                        text-align: left;
+                        padding: 10px;
+                        td, th{
+                            font-size: 15px;
+                            padding: 10px;
+                        }
+                    }
+                    .edit_merchant{
+                        cursor: pointer;
+                        color: #35A7FF;
+                        transition: all 0.2s;
+                        i{
+                            margin-left:20px;
+                        }
+                        &:hover{
+                            color: rgb(3, 129, 224);
+                        }
+                    }
+                    .box_checked{
+                        color: #33658A;
+                    }
+                    .box_unchecked{
+                        color: #C3423F;
+                    }
+                    tr:nth-child(even) {
+                        background-color: #f1f1f1;
+                    }
+                }
             }
         }
     }
