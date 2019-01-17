@@ -5,8 +5,8 @@ $(document).ready(function(){
         var labelNo = $(this).data("label");
 
         if ($(".the_label").hasClass(labelNo)){
-            var left = $(this).offset().left + 30;
-            var top = $(this).offset().top - 5;
+            var left = $(this).offset().left - 50;
+            var top = $(this).offset().top + 30;
             $("."+labelNo).fadeIn("fast");
             $(".the_label").css("left", left);
             $(".the_label").css("top", top);

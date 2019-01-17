@@ -1198,4 +1198,10 @@
   top: 0;
   font-size: 14px;
 }
+
+@media (min-width: 1000px) and (max-width: 1800px) {
+  .the_label {
+    font-size: 12px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
