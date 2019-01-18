@@ -256,19 +256,19 @@
   }
 }
 
-.modal_3 .modal_main, .modal_6 .modal_main, .modal_7 .modal_main, .modal_8 .modal_main, .modal_11 .modal_main {
+.modal_3 .modal_main, .modal_7 .modal_main, .modal_8 .modal_main, .modal_11 .modal_main {
   height: 180px;
 }
 
-.modal_3 .modal_main .modal_options, .modal_6 .modal_main .modal_options, .modal_7 .modal_main .modal_options, .modal_8 .modal_main .modal_options, .modal_11 .modal_main .modal_options {
+.modal_3 .modal_main .modal_options, .modal_7 .modal_main .modal_options, .modal_8 .modal_main .modal_options, .modal_11 .modal_main .modal_options {
   text-align: center;
 }
 
-.modal_3 .modal_main .modal_options button, .modal_6 .modal_main .modal_options button, .modal_7 .modal_main .modal_options button, .modal_8 .modal_main .modal_options button, .modal_11 .modal_main .modal_options button {
+.modal_3 .modal_main .modal_options button, .modal_7 .modal_main .modal_options button, .modal_8 .modal_main .modal_options button, .modal_11 .modal_main .modal_options button {
   margin-top: 30px;
 }
 
-.modal_3 .modal_main .modal_options .modal_edit_btn, .modal_6 .modal_main .modal_options .modal_edit_btn, .modal_7 .modal_main .modal_options .modal_edit_btn, .modal_8 .modal_main .modal_options .modal_edit_btn, .modal_11 .modal_main .modal_options .modal_edit_btn {
+.modal_3 .modal_main .modal_options .modal_edit_btn, .modal_7 .modal_main .modal_options .modal_edit_btn, .modal_8 .modal_main .modal_options .modal_edit_btn, .modal_11 .modal_main .modal_options .modal_edit_btn {
   margin-right: 20px;
   border: none;
   outline: none;
@@ -284,12 +284,12 @@
   background: #2469ff;
 }
 
-.modal_3 .modal_main .modal_options .modal_edit_btn:hover, .modal_6 .modal_main .modal_options .modal_edit_btn:hover, .modal_7 .modal_main .modal_options .modal_edit_btn:hover, .modal_8 .modal_main .modal_options .modal_edit_btn:hover, .modal_11 .modal_main .modal_options .modal_edit_btn:hover {
+.modal_3 .modal_main .modal_options .modal_edit_btn:hover, .modal_7 .modal_main .modal_options .modal_edit_btn:hover, .modal_8 .modal_main .modal_options .modal_edit_btn:hover, .modal_11 .modal_main .modal_options .modal_edit_btn:hover {
   -webkit-box-shadow: 0 0 10px #555;
           box-shadow: 0 0 10px #555;
 }
 
-.modal_3 .modal_main .modal_options .modal_delete_btn, .modal_6 .modal_main .modal_options .modal_delete_btn, .modal_7 .modal_main .modal_options .modal_delete_btn, .modal_8 .modal_main .modal_options .modal_delete_btn, .modal_11 .modal_main .modal_options .modal_delete_btn {
+.modal_3 .modal_main .modal_options .modal_delete_btn, .modal_7 .modal_main .modal_options .modal_delete_btn, .modal_8 .modal_main .modal_options .modal_delete_btn, .modal_11 .modal_main .modal_options .modal_delete_btn {
   border: none;
   outline: none;
   background: transparent;
@@ -304,12 +304,12 @@
   background: #b40000;
 }
 
-.modal_3 .modal_main .modal_options .modal_delete_btn:hover, .modal_6 .modal_main .modal_options .modal_delete_btn:hover, .modal_7 .modal_main .modal_options .modal_delete_btn:hover, .modal_8 .modal_main .modal_options .modal_delete_btn:hover, .modal_11 .modal_main .modal_options .modal_delete_btn:hover {
+.modal_3 .modal_main .modal_options .modal_delete_btn:hover, .modal_7 .modal_main .modal_options .modal_delete_btn:hover, .modal_8 .modal_main .modal_options .modal_delete_btn:hover, .modal_11 .modal_main .modal_options .modal_delete_btn:hover {
   -webkit-box-shadow: 0 0 10px #555;
           box-shadow: 0 0 10px #555;
 }
 
-.modal_3 .modal_main .modal_options .fas, .modal_6 .modal_main .modal_options .fas, .modal_7 .modal_main .modal_options .fas, .modal_8 .modal_main .modal_options .fas, .modal_11 .modal_main .modal_options .fas {
+.modal_3 .modal_main .modal_options .fas, .modal_7 .modal_main .modal_options .fas, .modal_8 .modal_main .modal_options .fas, .modal_11 .modal_main .modal_options .fas {
   margin-left: 5px;
 }
 
@@ -346,6 +346,79 @@
   background: red;
   color: white;
   margin-left: 10px;
+}
+
+.modal_6 .modal_main {
+  border-radius: 0;
+  border: none;
+  padding: 0;
+  background: white;
+  height: 150px;
+  width: 400px;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal_6 .modal_main .confirm_header {
+  position: relative;
+  text-align: center;
+  height: 100px;
+  border: 0.1px solid transparent;
+}
+
+.modal_6 .modal_main .confirm_header h3 {
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: lighter;
+  color: #555;
+}
+
+.modal_6 .modal_main .confirm_options {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'cancel_button delete_button';
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.modal_6 .modal_main .confirm_options .cancel_button {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: cancel_button;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  background: #cecece;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.modal_6 .modal_main .confirm_options .cancel_button:hover {
+  background: #acacac;
+}
+
+.modal_6 .modal_main .confirm_options #delete_button {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: delete_button;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  background: #F44336;
+  color: white;
+  font-size: 16px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.modal_6 .modal_main .confirm_options #delete_button:hover {
+  background: #e92719;
 }
 
 .admin_panel .main_section {

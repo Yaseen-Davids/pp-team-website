@@ -34,6 +34,7 @@
             <%- include('./modals/task_edit', locals) %>
             <%- include('./modals/new_merchant', locals) %>
             <%- include('./modals/edit_merchant', locals) %>
+            <%- include('./modals/confirm_delete', locals) %>
 
             <!-- LABELS -->
             <%- include('./labels/label', locals) %>
@@ -104,10 +105,10 @@
                                     <% } else { %>
                                         <% if (notes[i].username == user.username) { %>
                                             <% if (notes[i].completed == 'true') { %>
-                                                <p class="notes_text visible">
+                                                <p class="notes_text visible" data-id="<%= notes[i].id %>">
                                                     <span class="notes_left">
                                                         <span><i data-id="<%= notes[i].id %>" class="fas fa-check note_complete note_icon label_main" data-label="label_5"></i></span>
-                                                        <span class="delete_note completed_task label_main" data-id="<%= notes[i].id %>" data-label="label_3"><i class="fas fa-trash-alt"></i></span>
+                                                        <span class="delete_note modal_btn completed_task label_main" data-modal="modal_6" data-id="<%= notes[i].id %>" data-delete="delete_task" data-label="label_3"><i class="fas fa-trash-alt"></i></span>
                                                     </span>
                                                     <span class="notes_center">
                                                             <span data-id="<%= notes[i].id %>" class="notes_notes modal_btn" data-modal="modal_5"><%= notes[i].note %></span>
@@ -117,10 +118,10 @@
                                                     </span>
                                                 </p>
                                             <% } else { %>
-                                                <p class="notes_text visible">
+                                                <p class="notes_text visible" data-id="<%= notes[i].id %>">
                                                     <span class="notes_left">
                                                         <span><i data-id="<%= notes[i].id %>" data-label="label_4" class="fas fa-check note_check note_icon label_main"></i></span>
-                                                        <span class="delete_note label_main" data-label="label_3" data-id="<%= notes[i].id %>"><i class="fas fa-trash-alt"></i></span>
+                                                        <span class="delete_note modal_btn label_main" data-delete="delete_task" data-modal="modal_6" data-label="label_3" data-id="<%= notes[i].id %>"><i class="fas fa-trash-alt"></i></span>
                                                     </span>
                                                     <span class="notes_center">
                                                         <span data-id="<%= notes[i].id %>" class="notes_notes modal_btn" data-modal="modal_5"><%= notes[i].note %></span>
@@ -188,9 +189,9 @@
                                                         <td><i class="far fa-square box_unchecked"></i></td>
                                                     <% } %>
                                                     <td><%= merchants[n].update %></td>
-                                                    <td style="vertical-align: middle; text-align: center;">
+                                                    <td data-id="<%= merchants[n].id %>" style="vertical-align: middle; text-align: center;">
                                                         <i class="fas fa-edit edit_merchant modal_btn" data-modal="modal_10" data-id="<%= merchants[n].id %>"></i>
-                                                        <i class="fas fa-trash-alt delete_merchant" data-id="<%= merchants[n].id %>"></i>
+                                                        <i class="fas fa-trash-alt delete_merchant modal_btn" data-modal="modal_6" data-delete="delete_merchant"  data-id="<%= merchants[n].id %>"></i>
                                                     </td>
                                                 </tr>
                                             <% } %>
@@ -217,6 +218,7 @@
     <script src="/javascripts/script.js"></script>
     <script src="/javascripts/home.js"></script>
     <script src="/javascripts/modals.js"></script>
+    <script src="/javascripts/delete.js"></script>
     <script src="/javascripts/label.js"></script>
     <script>
 

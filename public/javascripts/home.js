@@ -38,35 +38,6 @@ $(document).ready(function(){
         }
     })
 
-    // ******************** DELETE NOTE ********************
-
-    $('.delete_note').on('click', function(e){
-
-        // Confirmation message
-        let confirmDelete = confirm("Are you sure you want to delete the note ?");
-        if (confirmDelete == true){
-            
-            $(this).closest("p").remove();
-            // target event
-            let target = $(this);
-            // Data attrib of button
-            const id = target.attr('data-id');
-
-            // Ajax function
-            $.ajax({
-                method: 'DELETE',
-                url: '/delete-note/'+id,
-                success: function(response){
-                    console.log("Task deleted")
-                },
-                error: function(err){
-                    console.log(err);
-                }
-            });
-        }
-
-    });
-
     // **************** MARK TASK AS COMPLETE OR NOT COMPLETE ****************
 
     $('.note_icon').on('click', function(e){
@@ -197,30 +168,30 @@ $(document).ready(function(){
 
     });
 
-    $(".delete_merchant").on('click', function(){
+    // $(".delete_merchant").on('click', function(){
 
-        let confirmDelete = confirm("Are you sure you want to delete this merchant ?");
-        if (confirmDelete == true){
+    //     let confirmDelete = confirm("Are you sure you want to delete this merchant ?");
+    //     if (confirmDelete == true){
             
-            $(this).closest("tr").remove();
-            // target event
-            let target = $(this);
-            // Data attrib of button
-            const id = target.attr('data-id');
+    //         $(this).closest("tr").remove();
+    //         // target event
+    //         let target = $(this);
+    //         // Data attrib of button
+    //         const id = target.attr('data-id');
 
-            // Ajax function
-            $.ajax({
-                method: 'DELETE',
-                url: '/delete-merchant/'+id,
-                success: function(response){
-                    console.log("Task deleted")
-                },
-                error: function(err){
-                    console.log(err);
-                }
-            });
-        }
+    //         // Ajax function
+    //         $.ajax({
+    //             method: 'DELETE',
+    //             url: '/delete-merchant/'+id,
+    //             success: function(response){
+    //                 console.log("Task deleted")
+    //             },
+    //             error: function(err){
+    //                 console.log(err);
+    //             }
+    //         });
+    //     }
 
-    })
+    // })
 
 })

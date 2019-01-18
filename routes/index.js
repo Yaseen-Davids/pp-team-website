@@ -145,20 +145,18 @@ router.get('/redo-note/:id', ensureAuthenticated, function(req, res, next){
 });
 
 // ************** DELETE NOTE **************
-router.delete('/delete-note/:id', ensureAuthenticated, function(req, res, next){
+router.delete('/delete-note/id=:id', ensureAuthenticated, function(req, res, next){
 
   let query = {_id:req.params.id};
 
   Notes.findById(req.params.id, function(err, note){
     if (err) {
       console.log(err);
-      return;
     }
     else{
       Notes.remove(query, function(err){
         if (err){
           console.log(err);
-          return;
         }
       })
     }
@@ -514,7 +512,6 @@ router.delete('/delete-merchant/:id', ensureAuthenticated, function(req, res, ne
     }
   });
 })
-
 
 // ************** Access control **************
 function ensureAuthenticated(req, res, next){
