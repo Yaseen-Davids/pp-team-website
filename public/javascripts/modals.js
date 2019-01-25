@@ -25,18 +25,22 @@ $(document).ready(function(){
     // CLOSE MODAL BOX
     $(".close_modal").on('click', function(){
 
-        if ($("#delete_button").attr("class") != undefined || $("#confirm_button").attr("class") != undefined){
+        if ($("#delete_button").attr("class") != undefined){
+            
             var deleteClass = $("#delete_button")[0].className;
-
             $("#delete_button").removeClass(deleteClass);
             $("#delete_button").attr("data-id", "");
+            $(modalClass).fadeOut("fast");
+            
+        }
+
+        else if ($("#confirm_button").attr("class") != undefined){
 
             var confirmClass = $("#confirm_button")[0].className;
-
             $("#confirm_button").removeClass(confirmClass);
             $("#confirm_button").attr("data-id", "");
-
             $(modalClass).fadeOut("fast");
+
         }
 
         else{
