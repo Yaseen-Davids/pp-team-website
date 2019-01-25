@@ -12,6 +12,9 @@ $(document).ready(function(){
         else if (theClass == "delete_merchant"){
             deleteMerchant(id);
         }
+        else{
+            console.log("Class not found");
+        }
 
     })
 
@@ -74,6 +77,28 @@ $(document).ready(function(){
                 console.log(err);
             }
         });
+    }
+    
+    // CONFIRM BUTTON
+    $("#confirm_button ").click(function(){
+
+        var theClass = $(this)[0].className;
+        var id = $(this).attr("data-id");
+
+        console.log(theClass);
+        console.log(id);
+
+        if (theClass == "confirm_admin"){
+            confirmAdmin(id);
+        }
+        else{
+            console.log("Class not found");
+        }
+
+    });
+
+    function confirmAdmin(id){
+        console.log(id);
     }
 
 })

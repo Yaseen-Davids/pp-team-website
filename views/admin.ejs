@@ -29,7 +29,8 @@
 
             <!-- MODALS -->
             <%- include('./modals/confirm_delete', locals) %>
-            <%- include('./modals/confirm_reset', locals) %>
+            <!-- <%- include('./modals/confirm_reset', locals) %> -->
+            <%- include('./modals/confirm_admin', locals) %>
 
             <!-- LABELS -->
             <%- include('./labels/label', locals) %>
@@ -75,15 +76,15 @@
                                         <td><%= allnotes.length %></td>
                                         <td>
                                             <% if (allUsers[i].admin == "false"){ %>
-                                                <span class="first_btn r_admin_btn label_main modal_btn" data-id="<%= allUsers[i].id %>" data-modal="modal_8" data-label="label_6"><i class="fas fa-level-up-alt"></i></span>
+                                                <span class="first_btn r_admin_btn label_main modal_btn" data-id="<%= allUsers[i].id %>" data-confirm="confirm_admin" data-modal="modal_8" data-label="label_6"><i class="fas fa-level-up-alt"></i></span>
                                             <% } else { %>
-                                                <span class="first_btn r_admin_btn label_main" data-label="label_7"><i class="fas fa-level-down-alt"></i></span>
+                                                <span class="first_btn r_admin_btn label_main modal_btn" data-label="label_7" data-modal="modal_8" data-confirm="remove_admin" data-id="<%= allUsers[i].id %>"><i class="fas fa-level-down-alt"></i></span>
                                             <% } %>
                                             <span class="new_password first_btn label_main" data-label="label_2">
                                                 <i data-id="<%= allUsers[i].id %>" data-modal="modal_7" class="fas fa-unlock new_password_btn modal_btn"></i>
                                             </span>
-                                            <span class="remove_user label_main"  data-label="label_1">
-                                                <i data-id="<%= allUsers[i].id %>" data-modal="modal_6" class="fas fa-trash-alt dlt_user_btn modal_btn"></i>
+                                            <span class="remove_user label_main modal_btn" data-delete="delete_user"  data-label="label_1" data-id="<%= allUsers[i].id %>" data-modal="modal_6" >
+                                                <i class="fas fa-trash-alt dlt_user_btn"></i>
                                             </span>
                                         </td>
                                     </tr>
@@ -91,12 +92,6 @@
                             </table>
                         </div>
                     </div>
-
-                    <!-- <div class="admin_test_main">
-                        <div class="admin_test_header">
-                            <p>Test</p>
-                        </div>
-                    </div> -->
 
                 </div>
 
@@ -112,6 +107,7 @@
     <script src="/javascripts/jquery.js"></script>
     <script src="/javascripts/script.js"></script>
     <script src="/javascripts/modals.js"></script>
+    <script src="/javascripts/delete.js"></script>
     <script src="/javascripts/admin.js"></script>
     <script src="/javascripts/label.js"></script>
     <script>

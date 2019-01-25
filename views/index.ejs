@@ -16,6 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Poppins|Questrial" rel="stylesheet">
+    <!-- TABLE EXPORTER -->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/TableExport/3.3.13/css/tableexport.css" />
 </head>
 <body>
 
@@ -25,7 +27,9 @@
         <!-- GRID CONTAINER -->
         <div class="grid_container">
 
+            <!-- LOADING SCREEN -->
             <div class="loading_wrapper">
+                <!-- LOADING MAIN -->
                 <div class="loading_main"></div>
             </div>
 
@@ -92,7 +96,8 @@
                                 <p class="cloud_cover">Cloud <span class="cloud_text"></span></p>
                             </div>
                         </div>
-    
+                        
+                        <!-- NOTES SECTION MAIN -->
                         <div class="notes_main">
                             <div class="notes_header">
                                 <p>To-do List</p>
@@ -152,6 +157,7 @@
                             <div class="merchants_header">
                                 <p>My Merchants</p>
                                 <button class="merchant_btn modal_btn" data-modal="modal_9"><i class="fas fa-plus"></i> Add New</button>
+                                <button class="download_table_data"><i class="fas fa-file-download"></i> Download</button>
                             </div>
                             <div class="merchants_content">
                                 <table class="merchants_table">
@@ -220,6 +226,7 @@
     <script src="/javascripts/modals.js"></script>
     <script src="/javascripts/delete.js"></script>
     <script src="/javascripts/label.js"></script>
+
     <script>
 
         $(".home_link").css('background','#d15107');

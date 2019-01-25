@@ -261,7 +261,7 @@ and (max-width:1500px){
     margin-left: 10px;
 }
 
-.modal_6{
+.modal_6, .modal_8{
 
     .modal_main{
         border-radius: 0;
@@ -314,6 +314,21 @@ and (max-width:1500px){
                     background: rgb(233, 39, 25);
                 }
             }
+            #confirm_button{
+                grid-area: delete_button;
+                height: 50px;
+                @include button();
+                color: white;
+                font-size: 16px;
+                background: $buttonGreen;
+                transition: all 0.2s;
+                &:hover{
+                    background: #4dc000;
+                }
+            }
         }
     }
+}
+.required_input{
+    color: red;
 }

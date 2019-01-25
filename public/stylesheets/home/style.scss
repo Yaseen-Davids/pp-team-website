@@ -316,6 +316,14 @@
                 font-size: 14px;
                 @include addNewBtn();
             }
+            .download_table_data{
+                position: absolute;
+                top: 7px;
+                right: 150px;
+                @include button();
+                font-size: 14px;
+                @include addNewBtn();
+            }
             
             //  NOTES HEADER
             .merchants_header{

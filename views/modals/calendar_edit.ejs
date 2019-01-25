@@ -10,27 +10,27 @@
             <form method="POST" action="/calendar-edit">
                 <input type="hidden" id="edit_id" name="edit_id">
                 <div class="input_box">
-                    <label>Full Name:</label>
+                    <label>Full Name: <span class="required_input"> *</span></label>
                     <br>
                     <input type="text" id="edit_fullname" name="edit_fullname" placeholder="Loading..." autofocus autocomplete="off" spellcheck="false" required>
                 </div>
                 <div class="input_box">
-                    <label for="title">Reason for leave</label>
+                    <label for="title">Reason for leave <span class="required_input"> *</span></label>
                     <br>
                     <input type="text" id="edit_leave" name="edit_leave" placeholder="Loading..." autocomplete="off" required>
                 </div>
                 <div class="input_box">
-                    <label for="startDate">Start Date</label>
+                    <label for="startDate">Start Date <span class="required_input"> *</span></label>
                     <br>
                     <input class="calendar_date" id="edit_startdate" type="date" name="edit_startdate" autocomplete="off" required>
                 </div>
                 <div class="input_box">
-                    <label for="endDate">End Date</label>
+                    <label for="endDate">End Date <span class="required_input"> *</span></label>
                     <br>
                     <input class="calendar_date" id="edit_enddate" type="date" name="edit_enddate" autocomplete="off" required>
                 </div>
                 <div class="input_box">
-                    <label for="color">Color</label>
+                    <label for="color">Color <span class="required_input"> *</span></label>
                     <br>
                     <input id="edit_color" type="color" name="edit_color" autocomplete="off" required>
                 </div>

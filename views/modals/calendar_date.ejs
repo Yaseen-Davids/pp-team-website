@@ -9,27 +9,27 @@
         <div class="modal_form">
             <form method="POST" action="/calendar-form">
                 <div class="input_box">
-                    <label>Full Name:</label>
+                    <label>Full Name:  <span class="required_input"> *</span></label>
                     <br>
                     <input type="text" name="username" placeholder="Enter your username" autofocus autocomplete="off" spellcheck="false" required>
                 </div>
                 <div class="input_box">
-                    <label for="title">Reason for leave</label>
+                    <label for="title">Reason for leave <span class="required_input"> *</span></label>
                     <br>
                     <input type="text" name="title" placeholder="Enter your reason" autocomplete="off" required>
                 </div>
                 <div class="input_box">
-                    <label for="startDate">Start Date</label>
+                    <label for="startDate">Start Date <span class="required_input"> *</span></label>
                     <br>
                     <input class="calendar_date" type="date" name="startDate" autocomplete="off" required>
                 </div>
                 <div class="input_box">
-                    <label for="endDate">End Date</label>
+                    <label for="endDate">End Date <span class="required_input"> *</span></label>
                     <br>
                     <input class="calendar_date" type="date" name="endDate" autocomplete="off" required>
                 </div>
                 <div class="input_box">
-                    <label for="color">Color</label>
+                    <label for="color">Color <span class="required_input"> *</span></label>
                     <br>
                     <input id="color_input" type="color" name="color" autocomplete="off" required>
                 </div>

@@ -1,18 +1,13 @@
 <!-- MODAL -->
 
 <div class="modal_wrapper modal_8" data-modal="modal_8">
-        <div class="modal_main">
-            <div class="modal_header">
-                <h3>Confirm giving this user admin access <i class="fab fa-pagelines"></i></h3>
-                <i class="far fa-times-circle close_modal"></i>
-            </div>
-            <div class="modal_form modal_options">
-                <% if (user.admin == "true") { %>
-                    <button class="confirm_btn confirm_dlt_user disabled">Yes <i class="fas fa-check"></i></button>
-                    <button class="cancel_btn close_modal">Cancel <i class="fas fa-times"></i></button>
-                <% } else { %>
-                    <p class="not_authorised">You are not authorised to make changes.</p>
-                <% } %>
-            </div>
+    <div class="modal_main">
+        <div class="confirm_header">
+            <h3>Are you sure you want to do this?</h3>
+        </div>
+        <div class="confirm_options">
+            <button class="cancel_button close_modal">Cancel</button>
+            <button id="confirm_button">Confirm</button>
         </div>
     </div>
+</div>
