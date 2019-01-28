@@ -1,13 +1,13 @@
 $(document).ready(function(){
 
     $(".alert").on('click', function(){
-        $(".alert").animate({marginLeft: "+600px", opacity: "0"})
-        $(this).fadeOut();
+        $(".alert").animate({marginLeft: "+=400px", opacity: "0"})
+        $(this).fadeOut("slow");
     });
     
     setTimeout(function(){
-        $(".alert").animate({marginLeft: "+600px", opacity: "0"})
-        $(".alert").fadeOut();
+        $(".alert").animate({marginLeft: "+=400px", opacity: "0"})
+        $(".alert").fadeOut("slow");
     },3000);
 
 

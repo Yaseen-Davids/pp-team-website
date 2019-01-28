@@ -17,23 +17,23 @@
 </head>
 <body>
 
+    <!-- This is the Message -->
+    <%- messages('message', locals) %>
+    <!-- This is the Message -->
+    <% if (errors) { %>
+        <% console.log(errors) %>
+        <% errors.forEach(function (error){ %>
+            <div class="alert alert-login alert-danger">
+                <%= error.msg %>
+            </div>
+        <% }) %>
+    <% } %>
+
     <!-- CONTAINER -->
     <div class="container">
 
         <!-- WRAPPER -->
         <div class="wrapper login_wrapper">
-
-            <!-- This is the Message -->
-            <%- messages('message', locals) %>
-            <!-- This is the Message -->
-            <% if (errors) { %>
-                <% console.log(errors) %>
-                <% errors.forEach(function (error){ %>
-                    <div class="alert alert-login alert-danger">
-                        <%= error.msg %>
-                    </div>
-                <% }) %>
-            <% } %>
 
             <!-- PEACH LOGO -->
             <div class="logo" id="element">
