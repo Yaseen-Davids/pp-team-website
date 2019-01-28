@@ -1,28 +1,30 @@
 $(document).ready(function(){
 
-    var usernameInput = $("input[name=username]");
-    var emailInput = $("input[name=email]");
-    var passInput = $("#password");
-    var confirmInput = $("input[name=password2]");
-    var errorText = $(".user_error");
-    var submitBtn = $("button[type=submit]");
-    var registerErrMsg = $("span").text();
-    var numbers = ["1","2","3","4","5","6","7","8","9","0"];
+    var usernameInput = $("input[name=username]"),
+    emailInput = $("input[name=email]"),
+    passwordInput = $("input[name=password]"),
+    confirmInput = $("input[name=confPassword]"),
+    passInput = $("#password"),
+    submitBtn = $("button[type=submit]"),
+    numbers = ["1","2","3","4","5","6","7","8","9","0"];
 
     function lockButton(){
         $(submitBtn).prop('disabled', true);
         $(submitBtn).css('background', '#cecece');
+        console.log("LOCKED");
+        console.log($(confirmInput).val())
     }
     function unlockButton(){
         $(submitBtn).prop('disabled', false);
         $(submitBtn).css('background', '#57b846');
+        console.log("UNLOCKED");
     }
 
     $("#username").on('keyup', function() {
         if ($(this).val().length > 5){
             $(".user_error").text("");
             $(".fa-user").css("color", "green");
-            if ($(".user_error").text() == "" && $(".pass_error").text() == "" && $(".email_error").text() == ""){
+            if ($(".register_err_msg").text() == "" && $(usernameInput).val() != "" && $(emailInput).val() != "" && $(passwordInput).val() != "" && $(confirmInput).val() != ""){
                 unlockButton();
             }
         }
@@ -42,7 +44,7 @@ $(document).ready(function(){
         if ($(this).val().includes("@")){
             $(".email_error").text("");
             $(".fa-envelope").css("color", "green");
-            if ($(".user_error").text() == "" && $(".pass_error").text() == "" && $(".email_error").text() == ""){
+            if ($(".register_err_msg").text() == "" && $(usernameInput).val() != "" && $(emailInput).val() != "" && $(passwordInput).val() != "" && $(confirmInput).val() != ""){
                 unlockButton();
             }
         }
@@ -58,12 +60,10 @@ $(document).ready(function(){
     })
 
     $("#password").on('keyup', function() {
-        // if ($(this).val().length > 5 && numbers.some(substring=>$(this).val().includes(substring))){
-        // }
         if ($(this).val().length > 5 && numbers.some(substring=>$(this).val().includes(substring))){
             $(".pass_valid").text("");
             $(".lock_1").css("color", "green");
-            if ($(".user_error").text() == "" && $(".pass_error").text() == "" && $(".email_error").text() == "" && $(".pass_valid").text() == ""){
+            if ($(".register_err_msg").text() == "" && $(usernameInput).val() != "" && $(emailInput).val() != "" && $(passwordInput).val() != "" && $(confirmInput).val() != ""){
                 unlockButton();
             }
         }
@@ -84,7 +84,7 @@ $(document).ready(function(){
         }
     })
 
-    $(confirmInput).on('keyup', () => {
+    $(confirmInput).on('keyup', function() {
         if ($(passInput).val() != $(confirmInput).val()){
             $(".pass_error").text("Passwords do not match");
             $(".lock_2").css("color", "red");
@@ -97,10 +97,10 @@ $(document).ready(function(){
         else{
             $(".pass_error").text("");
             $(".lock_2").css("color", "green");
-            if ($(".user_error").text() == "" && $(".pass_error").text() == "" && $(".email_error").text() == ""){
+            if ($(".register_err_msg").text() == "" && $(usernameInput).val() != "" && $(emailInput).val() != "" && $(passwordInput).val() != "" && $(confirmInput).val() != ""){
                 unlockButton();
             }
         }
-    })
+    });
     
 })
