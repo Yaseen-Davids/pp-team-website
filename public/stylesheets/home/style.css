@@ -445,6 +445,15 @@
   color: red;
 }
 
+.modal_12 .modal_main {
+  width: 700px;
+  padding: 10px;
+}
+
+.modal_12 .modal_main .message_header {
+  text-align: center;
+}
+
 @-webkit-keyframes fadeTimeIn {
   0% {
     opacity: 0;
