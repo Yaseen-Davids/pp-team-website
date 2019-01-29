@@ -9,10 +9,10 @@ $(document).ready(function(){
         var month = date.getMonth();
         var year = date.getFullYear();
 
-        var daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+        var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         var monthsOfYear = ['Jan', 'Feb', 'March', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Nov', 'Dec'];
 
-        dayText = daysOfWeek[day - 1];
+        dayText = daysOfWeek[day];
         dateText = monthsOfYear[month] + ", " + theDate + " " +  year;
 
         $(".today_day").text(dayText);

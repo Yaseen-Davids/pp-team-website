@@ -463,8 +463,6 @@ router.post("/edit_merchant", ensureAuthenticated, function(req, res, next){
   
   var query = {_id: req.body.id};
 
-  console.log(query);
-
   Merchant.update(query, merchant, function(err){
     if (err){
       console.log(err);
@@ -511,6 +509,67 @@ router.delete('/delete-merchant/:id', ensureAuthenticated, function(req, res, ne
       })
     }
   });
+})
+
+router.post("/user-admin", ensureAuthenticated, function(req, res, next){
+
+  var id = req.body.id;
+  var query = {_id: id}
+
+  var user = {};
+  user.username = req.body.username;
+  user.email = req.body.email;
+  user.password = req.body.password;
+  user.token = req.body.token;
+  user.admin = "true";
+  
+  User.update(query, user, function(error){
+    if (error){
+      console.log(error)
+    }
+    else{
+      req.flash("success", "Merchant account updated");
+      res.redirect('/admin');
+    }
+  })
+
+})
+
+router.post("/remove-admin", ensureAuthenticated, function(req, res, next){
+
+  var id = req.body.id;
+  var query = {_id: id}
+
+  var user = {};
+  user.username = req.body.username;
+  user.email = req.body.email;
+  user.password = req.body.password;
+  user.token = req.body.token;
+  user.admin = "false";
+  
+  User.update(query, user, function(error){
+    if (error){
+      console.log(error)
+    }
+    else{
+      req.flash("success", "Merchant account updated");
+      res.redirect('/admin');
+    }
+  })
+
+})
+
+router.get("/get-user/:id", ensureAuthenticated, function(req, res, next){
+
+  User.findById(req.params.id, function(err, user){
+    if (err){
+      console.log(err);
+    }
+    else{
+      res.send(user);
+    }
+  })
+
 })
 
 // ************** Access control **************

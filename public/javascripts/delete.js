@@ -119,11 +119,11 @@ $(document).ready(function(){
         var theClass = $(this)[0].className;
         var id = $(this).attr("data-id");
 
-        console.log(theClass);
-        console.log(id);
-
         if (theClass == "confirm_admin"){
             confirmAdmin(id);
+        }
+        else if(theClass == "remove_admin"){
+            removeAdmin(id);
         }
         else{
             console.log("Class not found");
@@ -132,7 +132,71 @@ $(document).ready(function(){
     });
 
     function confirmAdmin(id){
-        console.log(id);
+        $(".loading_wrapper").fadeIn();
+        $.ajax({
+            method: 'GET',
+            url: '/get-user/' + id,
+            success: function(response){
+                if (response != null && response != ""){
+
+                    var adminUser = {};
+
+                    adminUser.id = response._id;
+                    adminUser.username = response.username;
+                    adminUser.password = response.password;
+                    adminUser.email = response.email;
+                    adminUser.token = response.token;
+                    adminUser.admin = response.admin;
+
+                    $.ajax({
+                        method: "POST",
+                        url: "/user-admin",
+                        ContentType: "application/json",
+                        data: adminUser,
+                        success: function(result){
+                            window.location.href = "/admin";
+                        }
+                    })
+                }
+            },
+            error: function(err){
+                console.log(err);
+            }
+        });
+    }
+
+    function removeAdmin(id){
+        $(".loading_wrapper").fadeIn();
+        $.ajax({
+            method: 'GET',
+            url: '/get-user/' + id,
+            success: function(response){
+                if (response != null && response != ""){
+
+                    var adminUser = {};
+
+                    adminUser.id = response._id;
+                    adminUser.username = response.username;
+                    adminUser.password = response.password;
+                    adminUser.email = response.email;
+                    adminUser.token = response.token;
+                    adminUser.admin = response.admin;
+
+                    $.ajax({
+                        method: "POST",
+                        url: "/remove-admin",
+                        ContentType: "application/json",
+                        data: adminUser,
+                        success: function(result){
+                            window.location.href = "/admin";
+                        }
+                    })
+                }
+            },
+            error: function(err){
+                console.log(err);
+            }
+        });
     }
 
 })
