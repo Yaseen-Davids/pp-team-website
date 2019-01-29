@@ -12,6 +12,9 @@ $(document).ready(function(){
         else if (theClass == "delete_merchant"){
             deleteMerchant(id);
         }
+        else if(theClass == "delete_user"){
+            deleteUser(id);
+        }
         else{
             console.log("Class not found");
         }
@@ -77,6 +80,37 @@ $(document).ready(function(){
                 console.log(err);
             }
         });
+    };
+
+    function deleteUser(id){
+        $(".close_modal").click();
+
+        var tableData = $(".admin_users_table tr");
+        // console.log(tableData);
+
+        for (var n = 0; n < tableData.length; n++){
+            if (tableData[n].dataset.id == id){
+                tableData[n].closest("tr").remove();
+                confirmDeleteUser(id);
+                return;
+            }
+            else{
+                console.log("Not found");
+            }
+        }
+
+        function confirmDeleteUser(id){
+            $.ajax({
+                method: 'DELETE',
+                url: '/delete-user/'+id,
+                success: function(response){
+                    console.log("User deleted")
+                },
+                error: function(err){
+                    console.log(err);
+                }
+            });
+        }
     }
     
     // CONFIRM BUTTON

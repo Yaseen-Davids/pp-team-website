@@ -420,7 +420,7 @@ router.delete("/delete-user/:id",ensureAuthenticated, function(req, res, next){
           return;
         }
         else{
-          return;
+          console.log("User account removed");
         }
       })
     }
