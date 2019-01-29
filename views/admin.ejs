@@ -62,6 +62,7 @@
                                     <th>Email</th>
                                     <th>Admin</th>
                                     <th>Tasks</th>
+                                    <th>Merchants</th>
                                     <th>Options</th>
                                 </tr>
                                 <% for (let i = 0; i < allUsers.length; i++){ %>
@@ -79,7 +80,14 @@
                                                 <% allnotes.push(notes[i2].note) %>
                                             <% } %>
                                         <% } %>
+                                        <% var allmerchants = [] %>
+                                        <% for (let i3 = 0; i3< merchants.length; i3++){ %>
+                                            <% if (merchants[i3].username == allUsers[i].username){ %>
+                                                <% allmerchants.push(merchants[i3].note) %>
+                                            <% } %>
+                                        <% } %>
                                         <td><%= allnotes.length %></td>
+                                        <td><%= allmerchants.length %></td>
                                         <td>
                                             <% if (allUsers[i].admin == "false"){ %>
                                                 <span class="first_btn r_admin_btn label_main modal_btn" data-id="<%= allUsers[i].id %>" data-confirm="confirm_admin" data-modal="modal_8" data-label="label_6"><i class="fas fa-level-up-alt"></i></span>

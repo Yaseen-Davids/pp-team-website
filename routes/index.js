@@ -386,17 +386,22 @@ router.get("/admin", ensureAuthenticated, function(req, res, next){
   else{
     User.find({}, function(user_err, users){
       Notes.find({}, function(notes_err, notes){
-        if (user_err || notes_err){
-          return;
-        }
-        else{
-          res.render("admin", {
-            header: "Admin",
-            allUsers: users,
-            notes: notes
-          })
-        }
-      })
+        Merchant.find({}, function(merchant_err, merchants){
+          if (user_err || notes_err || merchant_err){
+            return;
+          }
+          else{
+            res.render("admin", {
+              header: "Admin",
+              allUsers: users,
+              notes: notes,
+              merchants: merchants
+            })
+          }
+        })
+      }).sort(
+        {"name": 1}
+      )
     }).sort(
       { "_id":-1 }
     )
