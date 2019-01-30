@@ -86,12 +86,12 @@ router.get('/', ensureAuthenticated, function(req, res, next) {
   let errors = req.validationErrors();
 
   Notes.find({}, function(err, notes){
-    Merchant.find({}, function(errors, merchants){
+    Merchant.find({}, function(merch_err, merchants){
       if (err) {
         console.log(err);
       }
-      else if (errors){
-        console.log(errors);
+      else if (merch_err){
+        console.log(merch_err);
       }
       else {
         res.render('index', {
@@ -379,6 +379,8 @@ router.get('/feedback', ensureAuthenticated, function(req,res,rext){
 
 router.get("/admin", ensureAuthenticated, function(req, res, next){
 
+  let errors = req.validationErrors();
+
   if (res.locals.user.admin == "false"){
     req.flash("danger", "You do not have access to this.");
     res.redirect("/");
@@ -395,7 +397,8 @@ router.get("/admin", ensureAuthenticated, function(req, res, next){
               header: "Admin",
               allUsers: users,
               notes: notes,
-              merchants: merchants
+              merchants: merchants,
+              errors: errors
             })
           }
         })

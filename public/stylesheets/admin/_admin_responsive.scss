@@ -1,0 +1,133 @@
+@media (min-width:1000px)
+and (max-width:1800px){
+
+    // ************** ADMIN PANEL **************
+    .admin_panel{
+        
+        // ************** MAIN SECTION **************
+        .main_section{
+            display: grid;
+            grid-area: main_section;
+            grid-template-areas: 'admin_users_main'
+            ;
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+
+            // ************** ADMIN USERS MAIN **************
+            .admin_users_main{
+                grid-area: admin_users_main;
+                @include panelBox();
+                max-height: 400px;
+                color: $boxHeaderColor;
+
+                // ************** ADMIN USERS HEADER **************
+                .admin_users_header{
+                    @include boxHeaderSection();
+                }
+                .admin_users_content{
+                    padding: 10px;
+                    margin-top: 5px;
+                    overflow: scroll;
+                    @include scrollbar();
+                    .admin_users_table{
+                        border-collapse: collapse;
+                        width: 100%;
+                        tr{
+                            border: 1px solid #dddddd;
+                            text-align: left;
+                            padding: 10px;
+                            .fa-times{
+                                color: $deleteRed;
+                            }
+                            .fa-check{
+                                color: green;
+                            }
+                            .isAdmin{
+                                i{
+                                    margin-left: 15px;
+                                }
+                            }
+                            td, th{
+                                font-size: 15px;
+                                padding: 10px;
+                                .first_btn{
+                                    margin-right: 15px;
+                                }
+                                .label_main{
+                                    cursor: pointer;
+                                }
+                                .r_admin_btn{
+                                    color: rgb(42, 180, 42);
+                                }
+                                .new_password{
+                                    color: $editBlue;
+                                }
+                                .dlt_user_btn{
+                                    color: $deleteRed;
+                                }
+                            }
+                        }
+                        tr:nth-child(even) {
+                            background-color: #dddddd;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1200px)
+and (max-width:1800px){
+
+    // ************** ADMIN PANEL **************
+    .admin_panel{
+        
+        // ************** MAIN SECTION **************
+        .main_section{
+            display: grid;
+            grid-area: main_section;
+            grid-template-areas: 'admin_users_main'
+            ;
+            grid-template-columns: 80%;
+            grid-gap: 10px;
+
+            // ************** ADMIN USERS MAIN **************
+            .admin_users_main{
+                grid-area: admin_users_main;
+                @include panelBox();
+                max-height: 400px;
+
+                // ************** ADMIN USERS HEADER **************
+                .admin_users_header{
+                    @include boxHeaderSection();
+                }
+                .admin_users_content{
+                    padding: 10px;
+                    margin-top: 5px;
+                    overflow: scroll;
+                    .admin_users_table{
+                        border-collapse: collapse;
+                        width: 100%;
+                        tr{
+                            text-align: left;
+                            padding: 10px;
+                            .isAdmin{
+                                i{
+                                    margin-left: 15px;
+                                }
+                            }
+                            td, th{
+                                font-size: 15px;
+                                padding: 10px;
+                                .first_btn{
+                                    margin-right: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

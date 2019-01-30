@@ -619,4 +619,150 @@
     font-size: 12px;
   }
 }
+
+@media (min-width: 1000px) and (max-width: 1800px) {
+  .admin_panel .main_section {
+    display: -ms-grid;
+    display: grid;
+    grid-area: main_section;
+        grid-template-areas: 'admin_users_main';
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .admin_panel .main_section .admin_users_main {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: admin_users_main;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px #d8d8d8;
+            box-shadow: 0px 0px 10px #d8d8d8;
+    border: 1px solid rgba(212, 212, 212, 0.514);
+    max-height: 400px;
+    color: #555;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_header {
+    padding: 15px;
+    background: #f0f0f0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_header p {
+    font-family: 'Questrial', sans-serif;
+    font-size: 22px;
+    color: #555;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content {
+    padding: 10px;
+    margin-top: 5px;
+    overflow: scroll;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content::-webkit-scrollbar {
+    width: 10px;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content::-webkit-scrollbar-thumb {
+    background: #555;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr .fa-times {
+    color: #F44336;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr .fa-check {
+    color: green;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr .isAdmin i {
+    margin-left: 15px;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr td, .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr th {
+    font-size: 15px;
+    padding: 10px;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr td .first_btn, .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr th .first_btn {
+    margin-right: 15px;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr td .label_main, .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr th .label_main {
+    cursor: pointer;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr td .r_admin_btn, .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr th .r_admin_btn {
+    color: #2ab42a;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr td .new_password, .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr th .new_password {
+    color: #304ffe;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr td .dlt_user_btn, .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr th .dlt_user_btn {
+    color: #F44336;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1800px) {
+  .admin_panel .main_section {
+    display: -ms-grid;
+    display: grid;
+    grid-area: main_section;
+        grid-template-areas: 'admin_users_main';
+    -ms-grid-columns: 80%;
+        grid-template-columns: 80%;
+    grid-gap: 10px;
+  }
+  .admin_panel .main_section .admin_users_main {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: admin_users_main;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px #d8d8d8;
+            box-shadow: 0px 0px 10px #d8d8d8;
+    border: 1px solid rgba(212, 212, 212, 0.514);
+    max-height: 400px;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_header {
+    padding: 15px;
+    background: #f0f0f0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_header p {
+    font-family: 'Questrial', sans-serif;
+    font-size: 22px;
+    color: #555;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content {
+    padding: 10px;
+    margin-top: 5px;
+    overflow: scroll;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr {
+    text-align: left;
+    padding: 10px;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr .isAdmin i {
+    margin-left: 15px;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr td, .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr th {
+    font-size: 15px;
+    padding: 10px;
+  }
+  .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr td .first_btn, .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr th .first_btn {
+    margin-right: 15px;
+  }
+}
 /*# sourceMappingURL=admin.css.map */

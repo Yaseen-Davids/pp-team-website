@@ -8,6 +8,7 @@
     <!-- STYLESHEET -->
     <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/templates/template.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/admin/admin.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/alert.css" />
     <!-- FAVICON -->
     <link rel="icon" type="favicon" href="https://support.peachpayments.com/hc/en-us/article_attachments/200826988/Peach_Icon.png">
     <!-- FONT AWESOME -->
@@ -40,6 +41,18 @@
 
             <!-- LABELS -->
             <%- include('./labels/label', locals) %>
+
+            <!-- This is the Message -->
+            <%- messages('message', locals) %>
+            <!-- This is the Message -->
+            <% if (errors) { %>
+                <!-- <% console.log(errors) %> -->
+                <% errors.forEach(function (error){ %>
+                    <div class="alert alert-login alert-danger">
+                        <%= error.msg %>
+                    </div>
+                <% }) %>
+            <% } %>
 
             <!-- ADMIN MAIN -->
             <div class="admin_panel">

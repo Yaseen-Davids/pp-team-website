@@ -75,16 +75,8 @@
                 }
             }
         }
-        // .admin_test_main{
-        //     grid-area: admin_test_main;
-        //     @include panelBox();
-        //     max-height: 400px;
-        //     color: $boxHeaderColor;
-        //     .admin_test_header{
-        //         @include boxHeaderSection();
-        //     }
-        // }
     }
 }
 
 @import '../label';
+@import './admin_responsive';
