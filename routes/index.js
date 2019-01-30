@@ -588,12 +588,12 @@ router.get("/send-new-password/:id/:email", ensureAuthenticated, function(req, r
   var id = req.params.id;
   var email = req.params.email;
 
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+  sgMail.setApiKey("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")
   const msg = {
     to: email,
     from: 'yaseendavids477@gmail.com',
     subject: 'New Password Request - Peach Website',
-    html: "Go to the following link to reset your password: <br><a href='http://localhost:4040/new-password/" + id + "'>Reset my password</a>",
+    html: "Go to the following link to reset your password: <br><a href='https://peach-website.herokuapp.com/new-password/" + id + "'>Reset my password</a>",
   };
   sgMail.send(msg);
 
