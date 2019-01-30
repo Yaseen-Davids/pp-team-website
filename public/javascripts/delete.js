@@ -118,6 +118,7 @@ $(document).ready(function(){
 
         var theClass = $(this)[0].className;
         var id = $(this).attr("data-id");
+        var email = $(this).attr("data-email");
 
         if (theClass == "confirm_admin"){
             confirmAdmin(id);
@@ -126,7 +127,8 @@ $(document).ready(function(){
             removeAdmin(id);
         }
         else if(theClass == "new_password"){
-            newPassword(id);
+            $(".loading_wrapper").fadeIn();
+            newPassword(id, email);
         }
         else{
             console.log("Class not found");
@@ -202,9 +204,18 @@ $(document).ready(function(){
         });
     }
 
-    function newPassword(id){
+    function newPassword(id, email){
 
-        // under maintenance
+        $(".loading_wrapper").fadeOut();
+        $(".close_modal").click();
+
+        $.ajax({
+            url: "/send-new-password/" + id + "/" + email,
+            method: 'GET',
+            success: function(response){
+                console.log("Password request sent")
+            }
+        })
 
     }
 

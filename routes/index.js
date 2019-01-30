@@ -9,6 +9,8 @@ var request = require('request');
 var passport = require('passport');
 var back = require('express-back');
 var fs = require("fs");
+var sgMail = require('@sendgrid/mail');
+var bcrypt = require('bcryptjs');
 var LocalStorage = require('node-localstorage').LocalStorage,
 localStorage = new LocalStorage('./scratch');
 
@@ -577,6 +579,93 @@ router.get("/get-user/:id", ensureAuthenticated, function(req, res, next){
       res.send(user);
     }
   })
+
+})
+
+
+router.get("/send-new-password/:id/:email", ensureAuthenticated, function(req, res, next){
+
+  var id = req.params.id;
+  var email = req.params.email;
+
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+  const msg = {
+    to: email,
+    from: 'yaseendavids477@gmail.com',
+    subject: 'New Password Request - Peach Website',
+    html: "Go to the following link to reset your password: <br><a href='http://localhost:4040/new-password/" + id + "'>Reset my password</a>",
+  };
+  sgMail.send(msg);
+
+  console.log("Email sent");
+
+});
+
+router.get("/new-password/:id", function(req, res, next){
+
+  var query = {_id: req.params.id};
+  let errors = req.validationErrors();
+
+  User.findById(query, function(err, user){
+    if (err){
+      console.log(err)
+    }
+    else{
+      res.render("new-password", {
+        header: "New Password",
+        user: user,
+        errors: errors
+      })
+    }
+
+  })
+
+});
+
+router.post("/update-password", function(req, res, next){
+
+  var userPassword = req.body.password;
+  var confirmPassword = req.body.password2;
+
+  if (userPassword === confirmPassword){
+
+    bcrypt.genSalt(10, function(err, salt){
+      bcrypt.hash(userPassword, salt, function(err, hash){
+        
+        userPassword = hash;
+  
+        var user = {};
+        user.username = req.body.username;
+        user.email = req.body.email;
+        user.token = req.body.token;
+        user.admin = req.body.admin;
+        user.password = userPassword;
+
+        var errors = req.validationErrors();
+        var query = {_id: req.body.id};
+
+        if (errors){
+          console.log(errors)
+        }
+        else{
+          User.update(query, user, function(error){
+            if (error){
+              console.log(error)
+            }
+            else{
+              req.flash("success", "Password Updated");
+              res.redirect('/users/login');
+            }
+          })
+        }
+      })
+    })
+
+  }
+  else{
+    req.flash("danger", "Passwords do not match");
+    res.redirect('back');
+  }
 
 })
 

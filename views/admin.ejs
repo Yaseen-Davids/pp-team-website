@@ -106,7 +106,7 @@
                                             <% } else { %>
                                                 <span class="first_btn r_admin_btn label_main modal_btn" data-label="label_7" data-modal="modal_8" data-confirm="remove_admin" data-id="<%= allUsers[i].id %>"><i class="fas fa-level-down-alt"></i></span>
                                             <% } %>
-                                            <span data-modal="modal_8" data-id="<%= allUsers[i].id %>" class="new_password new_password_btn modal_btn first_btn label_main" data-label="label_2"  data-confirm="new_password">
+                                            <span data-email="<%= allUsers[i].email %>" data-modal="modal_8" data-id="<%= allUsers[i].id %>" class="new_password new_password_btn modal_btn first_btn label_main" data-label="label_2"  data-confirm="new_password">
                                                 <i class="fas fa-unlock"></i>
                                             </span>
                                             <span class="remove_user label_main modal_btn" data-delete="delete_user"  data-label="label_1" data-id="<%= allUsers[i].id %>" data-modal="modal_6" >
