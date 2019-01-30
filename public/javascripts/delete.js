@@ -125,6 +125,9 @@ $(document).ready(function(){
         else if(theClass == "remove_admin"){
             removeAdmin(id);
         }
+        else if(theClass == "new_password"){
+            newPassword(id);
+        }
         else{
             console.log("Class not found");
         }
@@ -197,6 +200,12 @@ $(document).ready(function(){
                 console.log(err);
             }
         });
+    }
+
+    function newPassword(id){
+
+        // under maintenance
+
     }
 
 })

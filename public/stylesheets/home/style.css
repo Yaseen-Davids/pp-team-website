@@ -1327,7 +1327,7 @@
 }
 
 .the_label {
-  display: none;
+  opacity: 0;
   z-index: 1000000;
   position: absolute;
   padding: 2px 2px;

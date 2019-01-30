@@ -36,7 +36,6 @@
 
             <!-- MODALS -->
             <%- include('./modals/confirm_delete', locals) %>
-            <%- include('./modals/confirm_reset', locals) %>
             <%- include('./modals/confirm_admin', locals) %>
 
             <!-- LABELS -->
@@ -107,8 +106,8 @@
                                             <% } else { %>
                                                 <span class="first_btn r_admin_btn label_main modal_btn" data-label="label_7" data-modal="modal_8" data-confirm="remove_admin" data-id="<%= allUsers[i].id %>"><i class="fas fa-level-down-alt"></i></span>
                                             <% } %>
-                                            <span class="new_password first_btn label_main" data-label="label_2">
-                                                <i data-id="<%= allUsers[i].id %>" data-modal="modal_7" class="fas fa-unlock new_password_btn modal_btn"></i>
+                                            <span data-modal="modal_8" data-id="<%= allUsers[i].id %>" class="new_password new_password_btn modal_btn first_btn label_main" data-label="label_2"  data-confirm="new_password">
+                                                <i class="fas fa-unlock"></i>
                                             </span>
                                             <span class="remove_user label_main modal_btn" data-delete="delete_user"  data-label="label_1" data-id="<%= allUsers[i].id %>" data-modal="modal_6" >
                                                 <i class="fas fa-trash-alt dlt_user_btn"></i>

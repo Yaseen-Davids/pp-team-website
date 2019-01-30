@@ -2,23 +2,28 @@ $(document).ready(function(){
 
     $(".label_main").hover(function(){
 
+        theLabel = $(".the_label");
+
         var labelNo = $(this).data("label");
 
-        if ($(".the_label").hasClass(labelNo)){
+        if ($(theLabel).hasClass(labelNo)){
             var left = $(this).offset().left - 50;
             var top = $(this).offset().top + 30;
-            $("."+labelNo).fadeIn("fast");
-            $(".the_label").css("left", left);
-            $(".the_label").css("top", top);
+            $("."+labelNo).css("opacity","1");
+            $(theLabel).css("left", left);
+            $(theLabel).css("top", top);
         }
 
     }, function(){
-        $(".the_label").css("display", "none");
-        $(".the_label").attr("style", "");
+        $(theLabel).css("opacity", "0");
+        $(theLabel).attr("style", "");
+        if ($(theLabel).css("opacity") == "1"){
+            $(theLabel).css("opacity", "0"); 
+        }
     });
 
     $('.label_main').mouseleave(function(){
-        $(".the_label").css("display", "none");
+        $(theLabel).css("opacity", "0");
     })
     
 })
