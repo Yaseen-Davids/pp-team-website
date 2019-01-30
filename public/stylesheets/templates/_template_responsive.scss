@@ -36,13 +36,14 @@ and (max-width: 1800px){
         display: grid;
         grid-template-areas: 'left_nav main_section'
         ;
-        grid-auto-columns: 150px 1fr;
+        grid-auto-columns: 160px 1fr;
         margin-top: 80px;
         
         .left_nav{
             grid-area: left_nav;
             height: 100vh;
             position: fixed;
+            width: 160px;
     
             .nav_nav{
                 padding: 20px;

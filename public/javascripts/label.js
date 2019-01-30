@@ -14,6 +14,7 @@ $(document).ready(function(){
 
     }, function(){
         $(".the_label").css("display", "none");
+        $(".the_label").attr("style", "");
     });
 
     $('.label_main').mouseleave(function(){
