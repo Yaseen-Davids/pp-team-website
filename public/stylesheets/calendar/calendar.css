@@ -445,15 +445,6 @@
   color: red;
 }
 
-.modal_12 .modal_main {
-  width: 700px;
-  padding: 10px;
-}
-
-.modal_12 .modal_main .message_header {
-  text-align: center;
-}
-
 .admin_panel .add_new_date {
   border: none;
   outline: none;
