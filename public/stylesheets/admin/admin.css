@@ -597,6 +597,10 @@
   color: #F44336;
 }
 
+.admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr td:hover, .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr th:hover {
+  cursor: default;
+}
+
 .admin_panel .main_section .admin_users_main .admin_users_content .admin_users_table tr:nth-child(even) {
   background-color: #dddddd;
 }

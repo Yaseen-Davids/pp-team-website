@@ -67,6 +67,9 @@
                             .dlt_user_btn{
                                 color: $deleteRed;
                             }
+                            &:hover{
+                                cursor: default;
+                            }
                         }
                     }
                     tr:nth-child(even) {

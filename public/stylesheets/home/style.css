@@ -1008,7 +1008,6 @@
 
 .admin_panel .main_section .merchants_main .merchants_content .merchants_table tr:hover {
   cursor: default;
-  background: #f3f3f3;
 }
 
 .admin_panel .main_section .merchants_main .merchants_content .merchants_table tr td, .admin_panel .main_section .merchants_main .merchants_content .merchants_table tr th {
