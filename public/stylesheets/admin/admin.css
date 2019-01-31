@@ -281,7 +281,7 @@
   font-size: 16px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background: #2469ff;
+  background: #304ffe;
 }
 
 .modal_3 .modal_main .modal_options .modal_edit_btn:hover, .modal_7 .modal_main .modal_options .modal_edit_btn:hover, .modal_8 .modal_main .modal_options .modal_edit_btn:hover, .modal_11 .modal_main .modal_options .modal_edit_btn:hover {
@@ -301,7 +301,7 @@
   font-size: 16px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background: #b40000;
+  background: #F44336;
 }
 
 .modal_3 .modal_main .modal_options .modal_delete_btn:hover, .modal_7 .modal_main .modal_options .modal_delete_btn:hover, .modal_8 .modal_main .modal_options .modal_delete_btn:hover, .modal_11 .modal_main .modal_options .modal_delete_btn:hover {

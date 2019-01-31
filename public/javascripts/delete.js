@@ -81,12 +81,11 @@ $(document).ready(function(){
             }
         });
     };
-
+    // DELETE USER ACCOUNT
     function deleteUser(id){
         $(".close_modal").click();
 
         var tableData = $(".admin_users_table tr");
-        // console.log(tableData);
 
         for (var n = 0; n < tableData.length; n++){
             if (tableData[n].dataset.id == id){
@@ -98,7 +97,7 @@ $(document).ready(function(){
                 console.log("Not found");
             }
         }
-
+        // CONFIRM DELETE USER ACCOUNT
         function confirmDeleteUser(id){
             $.ajax({
                 method: 'DELETE',
@@ -113,7 +112,7 @@ $(document).ready(function(){
         }
     }
     
-    // CONFIRM BUTTON
+    // ******************** MAIN CONFIRM FUNCTIONS ********************
     $("#confirm_button ").click(function(){
 
         var theClass = $(this)[0].className;
@@ -135,7 +134,7 @@ $(document).ready(function(){
         }
 
     });
-
+    // CONFIRM MAKE USER ADMIN
     function confirmAdmin(id){
         $(".loading_wrapper").fadeIn();
         $.ajax({
@@ -169,7 +168,7 @@ $(document).ready(function(){
             }
         });
     }
-
+    // CONFIRM REMOVE USER ADMIN RIGHTS
     function removeAdmin(id){
         $(".loading_wrapper").fadeIn();
         $.ajax({
@@ -203,7 +202,7 @@ $(document).ready(function(){
             }
         });
     }
-
+    // CONFIRM SEND USER NEW PASSWORD
     function newPassword(id, email){
 
         $(".loading_wrapper").fadeOut();
