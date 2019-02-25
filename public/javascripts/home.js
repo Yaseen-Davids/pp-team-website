@@ -24,19 +24,23 @@ $(document).ready(function(){
     var url = "https://api.apixu.com/v1/current.json?key=8585e574c307411ea26131730180612&q=South Africa/Cape Town&days=6";
 
     // GET the weather
-    $.ajax({
-        url: url,
-        method: "GET",
-        success: function(result){
-            console.log(result);
-            $(".weather_temp_text").text(result.current.temp_c + "°C");
-            $(".weather_condition").text(result.current.condition.text);
-            $(".wind_text").text(result.current.wind_kph + " km/h");
-            $(".humidity_text").text(result.current.humidity);
-            $(".cloud_text").text(result.current.cloud);
-            $(".weather_icon").append("<img src=' "+ result.current.condition.icon +"' >");
-        }
-    })
+    function getWeather(){
+        $.ajax({
+            url: url,
+            method: "GET",
+            success: function(result){
+                console.log(result);
+                $(".weather_temp_text").text(result.current.temp_c + "°C");
+                $(".weather_condition").text(result.current.condition.text);
+                $(".wind_text").text(result.current.wind_kph + " km/h");
+                $(".humidity_text").text(result.current.humidity);
+                $(".cloud_text").text(result.current.cloud);
+                $(".weather_icon").append("<img src=' "+ result.current.condition.icon +"' >");
+                $(".loading_wrapper").fadeOut();
+            }
+        })
+    }
+    getWeather();
 
     // **************** MARK TASK AS COMPLETE OR NOT COMPLETE ****************
 
@@ -97,28 +101,50 @@ $(document).ready(function(){
     // ******************** NEWS API ********************
     var newsURL = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=b04c0503ef41477cba37485ef01b7a7b';
 
-    $.ajax({
-        url: newsURL,
-        method: 'GET',
-        success: function(news){
-            var articles = news.articles;
-            for (let n = 0; n < articles.length; n++){
-                $(".news_content").append(
-                    '<div class="news_box">' +
-                        '<div class="news_image">' +
-                            '<a href="' + articles[n].url +'" target="_blank"><img class="news_img" src=" '+ articles[n].urlToImage + ' " alt=""></a>' +
-                        '</div>' +
-                        '<div class="news_text">' +
-                            '<a href="' + articles[n].url + '" target="_blank"><p class="article_title">' + articles[n].title + '</p></a>' +
-                            '<p class="article_info">' +
-                                '<i class="fas fa-user"></i><span class="article_author">' + articles[n].author + '</span>' +
-                                '<i class="fas fa-calendar calendar_icon"></i><span class="article_date">' + articles[n].publishedAt + '</span>' +
-                            '</p>' +
-                        '</div>' +
-                    '</div>'
-                );
+    function getNews(){
+        $.ajax({
+            url: newsURL,
+            method: 'GET',
+            success: function(news){
+                var articles = news.articles;
+                for (let n = 0; n < articles.length; n++){
+                    $(".news_content").append(
+                        '<div class="news_box">' +
+                            '<div class="news_image">' +
+                                '<a href="' + articles[n].url +'" target="_blank"><img class="news_img" src=" '+ articles[n].urlToImage + ' " alt=""></a>' +
+                            '</div>' +
+                            '<div class="news_text">' +
+                                '<a href="' + articles[n].url + '" target="_blank"><p class="article_title">' + articles[n].title + '</p></a>' +
+                                '<p class="article_info">' +
+                                    '<i class="fas fa-user"></i><span class="article_author">' + articles[n].author + '</span>' +
+                                    '<i class="fas fa-calendar calendar_icon"></i><span class="article_date">' + articles[n].publishedAt + '</span>' +
+                                '</p>' +
+                            '</div>' +
+                        '</div>'
+                    );
+                    $(".loading_wrapper").fadeOut();
+                }
             }
-        }
+        })
+    }
+
+    getNews();
+    
+    $("#refresh-news").click(function(){
+        $(".loading_wrapper").fadeIn();
+        $(".news_content").html("");
+        getNews();
+    })
+
+    $("#refresh-weather").click(function(){
+        $(".loading_wrapper").fadeIn();
+        $(".weather_temp_text").text("");
+        $(".weather_condition").text("");
+        $(".wind_text").text("");
+        $(".humidity_text").text("");
+        $(".cloud_text").text("");
+        $(".weather_icon").html("");
+        getWeather();
     })
 
     // ******************** EDIT TASK********************

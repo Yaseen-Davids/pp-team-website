@@ -557,12 +557,30 @@
   background: #f0f0f0;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  position: relative;
 }
 
 .admin_panel .main_section .weather_main .weather_header p {
   font-family: 'Questrial', sans-serif;
   font-size: 22px;
   color: #555;
+}
+
+.admin_panel .main_section .weather_main .weather_header .refresh-button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  font-size: 16px;
+  right: 20px;
+  outline: none;
+  top: 15px;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.admin_panel .main_section .weather_main .weather_header .refresh-button:hover {
+  color: #888;
 }
 
 .admin_panel .main_section .weather_main .weather_content {
@@ -811,12 +829,30 @@
   background: #f0f0f0;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  position: relative;
 }
 
 .admin_panel .main_section .news_main .news_header p {
   font-family: 'Questrial', sans-serif;
   font-size: 22px;
   color: #555;
+}
+
+.admin_panel .main_section .news_main .news_header .refresh-button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  font-size: 16px;
+  right: 20px;
+  outline: none;
+  top: 15px;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.admin_panel .main_section .news_main .news_header .refresh-button:hover {
+  color: #888;
 }
 
 .admin_panel .main_section .news_main .news_content {

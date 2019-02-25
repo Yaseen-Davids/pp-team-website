@@ -76,6 +76,10 @@
             // ************** WEATHER HEADER **************
             .weather_header{
                 @include boxHeaderSection();
+                position: relative;
+                .refresh-button{
+                    @include refreshBtn();
+                }
             }
 
             //  WEATHER CONTENT
@@ -252,6 +256,10 @@
 
             .news_header{
                 @include boxHeaderSection();
+                position: relative;
+                .refresh-button{
+                    @include refreshBtn();
+                }
             }
             .news_content{
                 height: 380px;

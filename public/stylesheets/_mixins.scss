@@ -93,3 +93,17 @@
     border-top: 1px solid #e2e2e2;
     padding: 8px;
 }
+@mixin refreshBtn{
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    font-size: 16px;
+    right: 20px;
+    outline: none;
+    top: 15px;
+    transition: all 0.1s;
+    &:hover{
+        color: #888;
+    }
+}
