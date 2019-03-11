@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-    $(".loading_wrapper").fadeOut("slow");
-
     $(".alert").on('click', function(){
         $(".alert").animate({marginLeft: "+=400px", opacity: "0"})
         $(this).fadeOut("slow");
