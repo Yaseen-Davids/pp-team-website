@@ -667,7 +667,23 @@ router.post("/update-password", function(req, res, next){
     res.redirect('back');
   }
 
-})
+});
+
+router.get('/leave', ensureAuthenticated, function(req, res, next){
+
+  res.render("leave", {
+    header: "Leave"
+  });
+
+});
+
+router.get('/profile', ensureAuthenticated, function(req, res, next){
+
+  res.render("profile", {
+    header: "Profile"
+  });
+
+});
 
 // ************** Access control **************
 function ensureAuthenticated(req, res, next){
