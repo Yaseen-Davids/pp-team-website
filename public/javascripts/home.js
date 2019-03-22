@@ -194,4 +194,63 @@ $(document).ready(function(){
 
     });
 
+    $(".breadcrumbs").click(function(){
+        $(this).fadeOut("slow");
+    })
+
+    $("#copy-data").click(function(){
+        
+        var tableData = $(".merchants_table");
+        // var theadRows = $(tableData)[0].children[0].rows[0].children;
+        var tbodyRows = $(tableData)[0].children[1].rows;
+
+        $("#input-copydata").text("");
+
+        for (let i = 0; i < tbodyRows.length; i++){
+
+            var merchantName = tbodyRows[i].children[0].innerText,
+            merchantSandbox = tbodyRows[i].children[1].className,
+            merchantDocs = tbodyRows[i].children[2].className,
+            merchantContract = tbodyRows[i].children[3].className,
+            merchantUpdate = tbodyRows[i].children[4].innerText;
+
+            if (merchantSandbox == "checked"){
+                merchantSandbox = "Sandboxes created"
+            }
+            else if (merchantSandbox == "unchecked"){
+                merchantSandbox = "Sandboxes NOT created"
+            }
+            if (merchantDocs == "checked"){
+                merchantDocs = "Documents received"
+            }
+            else if (merchantDocs == "unchecked"){
+                merchantDocs = "Documents NOT received"
+            }
+            if (merchantContract == "checked"){
+                merchantContract = "Contract received"
+            }
+            else if (merchantContract == "unchecked"){
+                merchantContract = "Contract NOT received"
+            }
+            
+            // var copyData = merchantName + " - " + merchantSandbox + " - " + merchantDocs + " - " + merchantContract + " - " + merchantUpdate + "\n";
+
+            var copyData = merchantName + " - " + merchantUpdate + "\n";
+
+            $("#input-copydata").append(copyData);
+
+        }
+
+        $("#input-copydata").select();
+        document.execCommand("copy");
+
+        // SHOW BREADCRUMB
+        $(".breadcrumbs").fadeIn("fast");
+        // HIDE BREADCRUMBS AFTER 2 SECONDS
+        setTimeout(function(){
+            $(".breadcrumbs").fadeOut("slow");
+        },2000);
+
+    });
+
 })

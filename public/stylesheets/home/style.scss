@@ -33,6 +33,22 @@
     margin-top: 3px;
 }
 
+.breadcrumbs{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    transform: translate(-50%, -95%);
+    z-index: 1000;
+    padding: 10px 60px;
+    border-radius: 10px;
+    text-align: center;
+    background: #333;
+
+    .bread-text{
+        color: white;
+    }
+}
 // ************** ADMIN PANEL **************
 .admin_panel{
 

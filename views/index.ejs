@@ -55,6 +55,10 @@
                 <% }) %>
             <% } %>
 
+            <div class="breadcrumbs" data-bread="copy-data">
+                <p class="bread-text">Data is copied!</p>
+            </div>
+
             <!-- TOP NAVBAR -->
             <%- include('./templates/top_nav', locals) %>
 
@@ -159,6 +163,7 @@
                             <div class="merchants_header">
                                 <p>My Merchants</p>
                                 <button class="merchant_btn modal_btn" data-modal="modal_9"><i class="fas fa-plus"></i> Add New</button>
+                                <button class="download_table_data" id="copy-data"><i class="fas fa-copy"></i> Copy data</button>
                             </div>
                             <div class="merchants_content">
                                 <table class="merchants_table">
@@ -178,22 +183,22 @@
                                                 <tr>
                                                     <td class="merchant_name_text"><%= merchants[n].name %></td>
                                                     <% if (merchants[n].sandbox == "yes"){ %>
-                                                        <td><i class="far fa-check-square box_checked"></i></td>
+                                                        <td class="checked"><i class="far fa-check-square box_checked"></i></td>
                                                     <% } %>
                                                     <% if (merchants[n].sandbox == "no"){ %>
-                                                        <td><i class="far fa-square box_unchecked"></i></td>
+                                                        <td class="unchecked"><i class="far fa-square box_unchecked"></i></td>
                                                     <% } %>
                                                     <% if (merchants[n].documents == "yes"){ %>
-                                                        <td><i class="far fa-check-square box_checked"></i></td>
+                                                        <td class="checked"><i class="far fa-check-square box_checked"></i></td>
                                                     <% } %>
                                                     <% if (merchants[n].documents == "no"){ %>
-                                                        <td><i class="far fa-square box_unchecked"></i></td>
+                                                        <td class="unchecked"><i class="far fa-square box_unchecked"></i></td>
                                                     <% } %>
                                                     <% if (merchants[n].contract == "yes"){ %>
-                                                        <td><i class="far fa-check-square box_checked"></i></td>
+                                                        <td class="checked"><i class="far fa-check-square box_checked"></i></td>
                                                     <% } %>
                                                     <% if (merchants[n].contract == "no"){ %>
-                                                        <td><i class="far fa-square box_unchecked"></i></td>
+                                                        <td class="unchecked"><i class="far fa-square box_unchecked"></i></td>
                                                     <% } %>
                                                     <td><%= merchants[n].update %></td>
                                                     <td data-id="<%= merchants[n].id %>" style="vertical-align: middle; text-align: center;">
@@ -205,11 +210,10 @@
                                         <% } %>
                                     </tbody>
                                 </table>
+                                <textarea style="opacity:0; height:0px; width:0px;" id="input-copydata"></textarea>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
 
                 <!-- RIGHT NAVBAR -->
