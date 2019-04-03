@@ -198,59 +198,97 @@ $(document).ready(function(){
         $(this).fadeOut("slow");
     })
 
-    $("#copy-data").click(function(){
+    $("#copy-data").click(function(e){
         
-        var tableData = $(".merchants_table");
-        // var theadRows = $(tableData)[0].children[0].rows[0].children;
-        var tbodyRows = $(tableData)[0].children[1].rows;
+        e.preventDefault();
+        
+        let arr = $(".checkbox");
+        let dataToCopy = [];
 
-        $("#input-copydata").text("");
-
-        for (let i = 0; i < tbodyRows.length; i++){
-
-            var merchantName = tbodyRows[i].children[0].innerText,
-            merchantSandbox = tbodyRows[i].children[1].className,
-            merchantDocs = tbodyRows[i].children[2].className,
-            merchantContract = tbodyRows[i].children[3].className,
-            merchantUpdate = tbodyRows[i].children[4].innerText;
-
-            if (merchantSandbox == "checked"){
-                merchantSandbox = "Sandboxes created"
+        for (let i2 = 0; i2 < arr.length; i2++){
+            if ($(arr[i2])[0].checked == true){
+                dataToCopy.push($(arr[i2])[0].value);
             }
-            else if (merchantSandbox == "unchecked"){
-                merchantSandbox = "Sandboxes NOT created"
-            }
-            if (merchantDocs == "checked"){
-                merchantDocs = "Documents received"
-            }
-            else if (merchantDocs == "unchecked"){
-                merchantDocs = "Documents NOT received"
-            }
-            if (merchantContract == "checked"){
-                merchantContract = "Contract received"
-            }
-            else if (merchantContract == "unchecked"){
-                merchantContract = "Contract NOT received"
-            }
-            
-            // var copyData = merchantName + " - " + merchantSandbox + " - " + merchantDocs + " - " + merchantContract + " - " + merchantUpdate + "\n";
-
-            var copyData = merchantName + " - " + merchantUpdate + "\n";
-
-            $("#input-copydata").append(copyData);
-
         }
 
-        $("#input-copydata").select();
-        document.execCommand("copy");
+        if (dataToCopy.length == 0){
+            console.log("Nothing to copy");
+        }
+        else{
+            var tableData = $(".merchants_table");
+            var tbodyRows = $(tableData)[0].children[1].rows;
 
-        // SHOW BREADCRUMB
-        $(".breadcrumbs").fadeIn("fast");
-        // HIDE BREADCRUMBS AFTER 2 SECONDS
-        setTimeout(function(){
-            $(".breadcrumbs").fadeOut("slow");
-        },2000);
+            $("#input-copydata").text("");
 
+            for (let i = 0; i < tbodyRows.length; i++){
+
+                var merchantName = tbodyRows[i].children[0].innerText,
+                merchantSandbox = tbodyRows[i].children[1].className,
+                merchantDocs = tbodyRows[i].children[2].className,
+                merchantContract = tbodyRows[i].children[3].className,
+                merchantUpdate = tbodyRows[i].children[4].innerText;
+
+                if (merchantSandbox == "checked"){
+                    merchantSandbox = "Sandboxes created"
+                }
+                else if (merchantSandbox == "unchecked"){
+                    merchantSandbox = "Sandboxes NOT created"
+                }
+                if (merchantDocs == "checked"){
+                    merchantDocs = "Documents received"
+                }
+                else if (merchantDocs == "unchecked"){
+                    merchantDocs = "Documents NOT received"
+                }
+                if (merchantContract == "checked"){
+                    merchantContract = "Contract received"
+                }
+                else if (merchantContract == "unchecked"){
+                    merchantContract = "Contract NOT received"
+                }
+
+                var copyData = merchantName;
+                
+                for (let i3 = 0; i3 < arr.length; i3++){
+                    if ($(arr[i3])[0].value == "Sandbox"){
+                        if($(arr[i3])[0].checked == true){
+                            copyData += " - " + merchantSandbox;
+                        }
+                    }
+                    else if ($(arr[i3])[0].value == "Docs"){
+                        if($(arr[i3])[0].checked == true){
+                            copyData += " - " + merchantDocs;
+                        }
+                    }
+                    else if ($(arr[i3])[0].value == "Contract"){
+                        if($(arr[i3])[0].checked == true){
+                            copyData += " - " + merchantContract;
+                        }
+                    }
+                    else if ($(arr[i3])[0].value == "Update"){
+                        if($(arr[i3])[0].checked == true){
+                            copyData += " - " + merchantUpdate;
+                        }
+                    }
+                }
+
+                copyData += "\n"
+
+                $("#input-copydata").append(copyData);
+            }
+
+            $("#input-copydata").select();
+            document.execCommand("copy");
+
+            $(".modal_11").fadeOut();
+
+            // SHOW BREADCRUMB
+            $(".breadcrumbs").fadeIn("fast");
+            // HIDE BREADCRUMBS AFTER 2 SECONDS
+            setTimeout(function(){
+                $(".breadcrumbs").fadeOut("slow");
+            },2000);
+        }
     });
 
 })

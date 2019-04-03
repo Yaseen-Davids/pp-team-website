@@ -39,6 +39,7 @@
             <%- include('./modals/new_merchant', locals) %>
             <%- include('./modals/edit_merchant', locals) %>
             <%- include('./modals/confirm_delete', locals) %>
+            <%- include('./modals/copy_data', locals) %>
 
             <!-- LABELS -->
             <%- include('./labels/label', locals) %>
@@ -56,7 +57,7 @@
             <% } %>
 
             <div class="breadcrumbs" data-bread="copy-data">
-                <p class="bread-text">Data is copied!</p>
+                <p class="bread-text">Data copied!</p>
             </div>
 
             <!-- TOP NAVBAR -->
@@ -163,7 +164,7 @@
                             <div class="merchants_header">
                                 <p>My Merchants</p>
                                 <button class="merchant_btn modal_btn" data-modal="modal_9"><i class="fas fa-plus"></i> Add New</button>
-                                <button class="download_table_data" id="copy-data"><i class="fas fa-copy"></i> Copy data</button>
+                                <button class="download_table_data modal_btn" data-modal="modal_11"><i class="fas fa-copy"></i> Copy data</button>
                             </div>
                             <div class="merchants_content">
                                 <table class="merchants_table">

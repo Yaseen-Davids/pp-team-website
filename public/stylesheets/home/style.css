@@ -156,6 +156,61 @@
   margin-left: 10px;
 }
 
+.modal_11 {
+  padding: 10px;
+}
+
+.modal_11 .modal_main {
+  height: 270px;
+}
+
+.modal_11 .modal_main .modal_form {
+  position: absolute;
+  left: 50%;
+  top: 80px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  padding: 10px 10px;
+}
+
+.modal_11 .modal_main .modal_form .checkbox {
+  margin-bottom: 12px;
+}
+
+.modal_11 .modal_main .modal_form .checkbox_text {
+  margin-left: 5px;
+  color: #555;
+}
+
+.modal_11 .modal_main .modal_form .copy-data {
+  outline: none;
+  width: 300px;
+  border: none;
+  background: -webkit-gradient(linear, right top, left top, from(#f1271186), to(#f5af1981));
+  background: linear-gradient(to left, #f1271186, #f5af1981);
+  padding: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.modal_11 .modal_main .modal_form .copy-data .submit_arrow {
+  color: transparent;
+  margin-left: 0px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.modal_11 .modal_main .modal_form .copy-data:hover .submit_arrow {
+  color: white;
+  margin-left: 10px;
+}
+
 .hideme {
   display: none;
 }
@@ -256,19 +311,19 @@
   }
 }
 
-.modal_3 .modal_main, .modal_7 .modal_main, .modal_8 .modal_main, .modal_11 .modal_main {
+.modal_3 .modal_main, .modal_7 .modal_main, .modal_8 .modal_main {
   height: 180px;
 }
 
-.modal_3 .modal_main .modal_options, .modal_7 .modal_main .modal_options, .modal_8 .modal_main .modal_options, .modal_11 .modal_main .modal_options {
+.modal_3 .modal_main .modal_options, .modal_7 .modal_main .modal_options, .modal_8 .modal_main .modal_options {
   text-align: center;
 }
 
-.modal_3 .modal_main .modal_options button, .modal_7 .modal_main .modal_options button, .modal_8 .modal_main .modal_options button, .modal_11 .modal_main .modal_options button {
+.modal_3 .modal_main .modal_options button, .modal_7 .modal_main .modal_options button, .modal_8 .modal_main .modal_options button {
   margin-top: 30px;
 }
 
-.modal_3 .modal_main .modal_options .modal_edit_btn, .modal_7 .modal_main .modal_options .modal_edit_btn, .modal_8 .modal_main .modal_options .modal_edit_btn, .modal_11 .modal_main .modal_options .modal_edit_btn {
+.modal_3 .modal_main .modal_options .modal_edit_btn, .modal_7 .modal_main .modal_options .modal_edit_btn, .modal_8 .modal_main .modal_options .modal_edit_btn {
   margin-right: 20px;
   border: none;
   outline: none;
@@ -284,12 +339,12 @@
   background: #304ffe;
 }
 
-.modal_3 .modal_main .modal_options .modal_edit_btn:hover, .modal_7 .modal_main .modal_options .modal_edit_btn:hover, .modal_8 .modal_main .modal_options .modal_edit_btn:hover, .modal_11 .modal_main .modal_options .modal_edit_btn:hover {
+.modal_3 .modal_main .modal_options .modal_edit_btn:hover, .modal_7 .modal_main .modal_options .modal_edit_btn:hover, .modal_8 .modal_main .modal_options .modal_edit_btn:hover {
   -webkit-box-shadow: 0 0 10px #555;
           box-shadow: 0 0 10px #555;
 }
 
-.modal_3 .modal_main .modal_options .modal_delete_btn, .modal_7 .modal_main .modal_options .modal_delete_btn, .modal_8 .modal_main .modal_options .modal_delete_btn, .modal_11 .modal_main .modal_options .modal_delete_btn {
+.modal_3 .modal_main .modal_options .modal_delete_btn, .modal_7 .modal_main .modal_options .modal_delete_btn, .modal_8 .modal_main .modal_options .modal_delete_btn {
   border: none;
   outline: none;
   background: transparent;
@@ -304,12 +359,12 @@
   background: #F44336;
 }
 
-.modal_3 .modal_main .modal_options .modal_delete_btn:hover, .modal_7 .modal_main .modal_options .modal_delete_btn:hover, .modal_8 .modal_main .modal_options .modal_delete_btn:hover, .modal_11 .modal_main .modal_options .modal_delete_btn:hover {
+.modal_3 .modal_main .modal_options .modal_delete_btn:hover, .modal_7 .modal_main .modal_options .modal_delete_btn:hover, .modal_8 .modal_main .modal_options .modal_delete_btn:hover {
   -webkit-box-shadow: 0 0 10px #555;
           box-shadow: 0 0 10px #555;
 }
 
-.modal_3 .modal_main .modal_options .fas, .modal_7 .modal_main .modal_options .fas, .modal_8 .modal_main .modal_options .fas, .modal_11 .modal_main .modal_options .fas {
+.modal_3 .modal_main .modal_options .fas, .modal_7 .modal_main .modal_options .fas, .modal_8 .modal_main .modal_options .fas {
   margin-left: 5px;
 }
 
