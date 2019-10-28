@@ -1,27 +1,25 @@
-var createError = require('http-errors');
-var express = require('express');
-var app = express();
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var mongoose = require('mongoose');
-var passport = require('passport');
-var session = require('express-session');
-var flash = require('connect-flash');
+const createError = require('http-errors');
+const express = require('express');
+const app = express();
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const mongoose = require('mongoose');
+const passport = require('passport');
 require('dotenv').config()
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
 
 // User model
-var User = require('./models/user');
-var Notes = require('./models/notes');
+const User = require('./models/user');
+const Notes = require('./models/notes');
 // Calender Model
-// var Calender = require('./models/calender');
+// const Calender = require('./models/calender');
 
 
 // Fetch database
-var config = require('./config/database');
+const config = require('./config/database');
 // Connect to database
 mongoose.connect(config.database, { useNewUrlParser: true });
 
